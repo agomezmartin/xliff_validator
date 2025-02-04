@@ -7,63 +7,96 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-04 13:25+0100\n"
-"PO-Revision-Date: 2025-02-04 13:25+0100\n"
+"POT-Creation-Date: 2025-02-04 20:16+0100\n"
+"PO-Revision-Date: 2025-02-04 17:40+0100\n"
 "Last-Translator: Alberto <EMAIL@ADDRESS>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CP1252\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: SRC/gui.py:13
+#: SRC/gui.py:19
 msgid "XLIFF Validator"
-msgstr ""
+msgstr "Validateur XLIFF"
 
-#: SRC/gui.py:18
+#: SRC/gui.py:42
 msgid "File"
-msgstr ""
+msgstr "Fichier"
 
-#: SRC/gui.py:20
-msgid "Open XLIFF"
-msgstr ""
-
-#: SRC/gui.py:24
-msgid "Exit"
-msgstr ""
-
-#: SRC/gui.py:31
-msgid "Segment ID"
-msgstr ""
-
-#: SRC/gui.py:31
-msgid "Source"
-msgstr ""
-
-#: SRC/gui.py:31
-msgid "Target"
-msgstr ""
-
-#: SRC/gui.py:42
+#: SRC/gui.py:44 SRC/gui.py:70 SRC/gui.py:100
 msgid "Open XLIFF File"
+msgstr "Ouvrir un fichier XLIFF"
+
+#: SRC/gui.py:48
+msgid "Exit"
+msgstr "Sortie"
+
+#: SRC/gui.py:53
+msgid "Help"
+msgstr "Aide"
+
+#: SRC/gui.py:55 SRC/gui.py:127
+msgid "About"
+msgstr "À propos"
+
+#: SRC/gui.py:65
+#, fuzzy
+msgid "Welcome to XLIFF Validator"
+msgstr "Validateur XLIFF"
+
+#: SRC/gui.py:86
+msgid "Segment ID"
+msgstr "ID du segment"
+
+#: SRC/gui.py:86
+msgid "Source"
+msgstr "Source"
+
+#: SRC/gui.py:86
+msgid "Target"
+msgstr "Cible"
+
+#: SRC/gui.py:86
+msgid "QA Status"
+msgstr "État QA"
+
+#: SRC/gui.py:91
+msgid "Back to Home Screen"
 msgstr ""
 
-#: SRC/gui.py:42
+#: SRC/gui.py:100
 msgid "XLIFF Files (*.xliff *.sdlxliff)"
-msgstr ""
+msgstr "Fichiers XLIFF (*.xliff *.sdlxliff)"
 
-#: SRC/gui.py:46
+#: SRC/gui.py:105
 msgid "No File Selected"
-msgstr ""
+msgstr "Aucun fichier sélectionné"
 
-#: SRC/gui.py:46
+#: SRC/gui.py:105
 msgid "You must select a valid XLIFF file."
-msgstr ""
+msgstr "Vous devez sélectionner un fichier XLIFF valide."
 
-#: SRC/parser.py:19
-msgid "Missing Translation"
-msgstr ""
+#: SRC/gui.py:116
+msgid "No Issues"
+msgstr "Aucun problème"
 
-#: SRC/parser.py:21
-msgid "Tag Mismatch"
+#: SRC/gui.py:127
+#, fuzzy
+msgid ""
+"XLIFF Validator\n"
+"Version 1.0\n"
+"© 2025"
 msgstr ""
+"XLIFF Validator\n"
+"Version 1.0\n"
+"© 2025"
+
+#~ msgid "Open XLIFF"
+#~ msgstr "Ouvrir XLIFF"
+
+#~ msgid "Missing Translation"
+#~ msgstr "Traduction manquante"
+
+#~ msgid "Tag Mismatch"
+#~ msgstr "Incohérence de balises"
