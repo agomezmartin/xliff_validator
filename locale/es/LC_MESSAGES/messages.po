@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-06 13:07+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: C:\xliff_validator\src\gui\home_screen.py:20
+msgid "Welcome to XLIFF Validator"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\home_screen.py:26
+msgid "Start Validation"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\home_screen.py:47
+msgid "Error: Failed to load Quicksand font"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\language_selector.py:34
+msgid "Select Language"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\language_selector.py:49
+msgid "Apply"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\language_selector.py:54
+#: C:\xliff_validator\src\gui\validator_screen.py:26
+msgid "Back to Home"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\main_window.py:20
+msgid "XLIFF Validator"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:15
+msgid "Select an XLIFF file to validate"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:18
+msgid "Open File"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:23
+msgid "Segment ID"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:23
+msgid "Source"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:23
+msgid "Target"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:23
+msgid "QA Status"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:34
+msgid "Open XLIFF File"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:40
+msgid "Error: File not found!"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:48
+msgid "Error loading file: "
+msgstr ""
+
+#: C:\xliff_validator\src\logic\qa_checker.py:12
+msgid "ERROR: â Untranslated Segment"
+msgstr ""
+
+#: C:\xliff_validator\src\logic\qa_checker.py:14
+msgid "ERROR: â ï¸ Mismatched Tags"
+msgstr ""
+
+#: C:\xliff_validator\src\logic\qa_checker.py:16
+msgid "â Correct"
+msgstr ""
