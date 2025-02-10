@@ -1,9 +1,11 @@
-﻿from PySide6.QtWidgets import QMainWindow, QStackedWidget, QMenuBar
+﻿from PySide6.QtWidgets import QMainWindow, QMenuBar, QMenu, QStackedWidget
 from PySide6.QtGui import QAction
 from src.gui.home_screen import HomeScreen
 from src.gui.validator_screen import ValidatorScreen
+from PySide6.QtCore import Qt
 import gettext
 
+# Initialize gettext for translations
 gettext.bindtextdomain("messages", "locale")
 gettext.textdomain("messages")
 translation = gettext.translation("messages", "locale", fallback=True)
@@ -13,56 +15,47 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("XLIFF Validator")
+        # Set up the main window
+        self.setWindowTitle(gettext_gettext("XLIFF Validator"))
         self.setGeometry(100, 100, 800, 600)
 
-        # Create stacked widget for screen switching
-        self.central_widget = QStackedWidget()
+        # Set up central widget
+        self.central_widget = QStackedWidget(self)
         self.setCentralWidget(self.central_widget)
 
-        # Instantiate screens
+        # Create screens
         self.home_screen = HomeScreen(self)
         self.validator_screen = ValidatorScreen(self)
 
-        # Add screens to stacked widget
+        # Add screens to the central widget
         self.central_widget.addWidget(self.home_screen)
         self.central_widget.addWidget(self.validator_screen)
 
-        # Set up the top-level menu
+        # Create top-level menu
         self.create_menu()
 
-        # Show the home screen initially
-        self.show_home_screen()
-
     def create_menu(self):
-        """✅ Creates the top-level menu."""
+        """ ✅ Creates the top-level menu with a File dropdown. """
         menu_bar = self.menuBar()
 
-        # Language Menu
-        language_menu = menu_bar.addMenu(gettext_gettext("Language"))
-        change_language_action = QAction(gettext_gettext("Change Language"), self)
-        change_language_action.triggered.connect(self.show_language_selector)
-        language_menu.addAction(change_language_action)
+        # ✅ Create "File" Menu
+        file_menu = QMenu(gettext_gettext("File"), self)
+        menu_bar.addMenu(file_menu)
 
-        # Exit Menu
-        exit_menu = menu_bar.addMenu(gettext_gettext("Exit"))
-        exit_action = QAction(gettext_gettext("Exit Application"), self)
+        # ✅ "Validate XLIFF File" Action (Now just navigates to validator screen)
+        validate_action = QAction(gettext_gettext("Validate XLIFF File"), self)
+        validate_action.triggered.connect(self.show_validator_screen)
+        file_menu.addAction(validate_action)
+
+        # ✅ "Exit" Action
+        exit_action = QAction(gettext_gettext("Exit"), self)
         exit_action.triggered.connect(self.close)
-        exit_menu.addAction(exit_action)
+        file_menu.addAction(exit_action)
+
+    def show_validator_screen(self):
+        """ ✅ Shows the Validator Screen (does not auto-open file dialog). """
+        self.central_widget.setCurrentWidget(self.validator_screen)
 
     def show_home_screen(self):
-        """ ✅ Show Home Screen """
-        self.resize(600, 400)  # Make Home Screen smaller
+        """ ✅ Navigates back to the Home Screen. """
         self.central_widget.setCurrentWidget(self.home_screen)
-
-    def open_feature_screen(self, screen, large=False):
-        """ ✅ Show the requested feature screen """
-        if large:
-            self.resize(1024, 768)  # Switch to larger mode
-        else:
-            self.resize(800, 600)  # Default size
-        self.central_widget.setCurrentWidget(screen)
-
-    def show_language_selector(self):
-        """ ✅ Placeholder for language selector functionality. """
-        print("Language selector not yet implemented.")
