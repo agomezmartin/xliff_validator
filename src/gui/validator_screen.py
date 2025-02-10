@@ -1,4 +1,6 @@
 ﻿from PySide6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QLabel, QTableWidget, QTableWidgetItem, QHeaderView, QFileDialog
+from PySide6.QtGui import QColor
+from PySide6.QtCore import Qt
 from src.logic.qa_checker import parse_xliff
 from src.logic.excel_exporter import export_to_excel
 import gettext
@@ -88,6 +90,21 @@ class ValidatorScreen(QWidget):
             self.table.setItem(row, 1, QTableWidgetItem(source))
             self.table.setItem(row, 2, QTableWidgetItem(target))
             self.table.setItem(row, 3, QTableWidgetItem(qa_status))
+
+        # ✅ Set QA status with color coding
+            status_item = QTableWidgetItem(qa_status)
+            status_item.setBackground(self.get_status_color(qa_status))
+            self.table.setItem(row, 3, status_item)
+
+    def get_status_color(self, status):
+        """ ✅ Returns color for QA status. """
+        if gettext_gettext("Correct") in status:
+            return QColor(144, 238, 144)  # 🟢 Green
+        elif gettext_gettext("Untranslated segment") in status:
+            return QColor(255, 255, 102)  # 🟡 Yellow
+        elif gettext_gettext("Mismatch/missing tag") in status:
+            return QColor(255, 102, 102)  # 🔴 Red
+        return QColor(255, 255, 255)  # Default: White
 
     def export_results(self):
         """ ✅ Calls the export function to save results to Excel. """
