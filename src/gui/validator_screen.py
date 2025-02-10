@@ -93,18 +93,20 @@ class ValidatorScreen(QWidget):
 
         # ✅ Set QA status with color coding
             status_item = QTableWidgetItem(qa_status)
-            status_item.setBackground(self.get_status_color(qa_status))
+            status_item.setForeground(self.get_status_color(qa_status))
             self.table.setItem(row, 3, status_item)
 
     def get_status_color(self, status):
-        """ ✅ Returns color for QA status. """
-        if gettext_gettext("Correct") in status:
-            return QColor(144, 238, 144)  # 🟢 Green
-        elif gettext_gettext("Untranslated segment") in status:
-            return QColor(255, 255, 102)  # 🟡 Yellow
-        elif gettext_gettext("Mismatch/missing tag") in status:
-            return QColor(255, 102, 102)  # 🔴 Red
-        return QColor(255, 255, 255)  # Default: White
+            """ ✅ Returns color for QA status (colored text). """
+            if gettext_gettext("Correct") in status:
+                return QColor(0, 128, 0)  # 🟢 Green for Correct
+            elif gettext_gettext("Untranslated segment") in status:
+                return QColor(139, 69, 19)  # 🟤 Brown for Untranslated segment
+            elif gettext_gettext("Mismatch/missing tag") in status:
+                return QColor(255, 0, 0)  # 🔴 Red for Mismatch
+            elif gettext_gettext("Pseudotranslated") in status:
+                return QColor(0, 0, 255)  # 🔵 Blue for Pseudotranslated
+            return QColor(0, 0, 0)  # Default: Black text color for other statuses
 
     def export_results(self):
         """ ✅ Calls the export function to save results to Excel. """
