@@ -26,7 +26,7 @@ class LanguageSelector(QWidget):
         font = QFont("Quicksand", 14)  # ✅ Now using built-in QFont
 
         # Language Selection Label
-        self.label = QLabel(_("Select Language"))
+        self.label = QLabel(gettext.gettext("Select Language"))
         self.label.setFont(font)
         self.label.setAlignment(Qt.AlignCenter)
         layout.addWidget(self.label)
@@ -44,12 +44,12 @@ class LanguageSelector(QWidget):
         layout.addLayout(dropdown_layout)
 
         # Apply Button
-        self.apply_button = QPushButton(_("Apply"))
+        self.apply_button = QPushButton(gettext.gettext("Apply"))
         self.apply_button.setFont(font)
         self.apply_button.setStyleSheet(self.get_button_style())  # ✅ Fixed
 
         # Back to Home Button
-        self.back_button = QPushButton(_("Back to Home"))
+        self.back_button = QPushButton(gettext.gettext("Back to Home"))
         self.back_button.setFont(font)
         self.back_button.setStyleSheet(self.get_button_style())  # ✅ Fixed
         self.back_button.clicked.connect(self.main_window.go_home)
