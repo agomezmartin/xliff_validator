@@ -1,91 +1,68 @@
-﻿from PySide6.QtWidgets import QMainWindow, QStackedWidget
+﻿from PySide6.QtWidgets import QMainWindow, QStackedWidget, QMenuBar
 from PySide6.QtGui import QAction
-from PySide6.QtCore import Qt, QPropertyAnimation, QEasingCurve
 from src.gui.home_screen import HomeScreen
 from src.gui.validator_screen import ValidatorScreen
-from src.gui.language_selector import LanguageSelector
 import gettext
 
-_ = gettext.gettext  # Get translated text
+gettext.bindtextdomain("messages", "locale")
+gettext.textdomain("messages")
+translation = gettext.translation("messages", "locale", fallback=True)
+gettext_gettext = translation.gettext
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle(_("XLIFF Validator"))
 
-        # ✅ Start with auto-sized Home Screen
+        self.setWindowTitle("XLIFF Validator")
+        self.setGeometry(100, 100, 800, 600)
+
+        # Create stacked widget for screen switching
+        self.central_widget = QStackedWidget()
+        self.setCentralWidget(self.central_widget)
+
+        # Instantiate screens
         self.home_screen = HomeScreen(self)
-        self.language_selector = LanguageSelector(self)
         self.validator_screen = ValidatorScreen(self)
 
-        self.stack = QStackedWidget()
-        self.stack.addWidget(self.home_screen)
-        self.stack.addWidget(self.language_selector)
-        self.stack.addWidget(self.validator_screen)
-        self.setCentralWidget(self.stack)
+        # Add screens to stacked widget
+        self.central_widget.addWidget(self.home_screen)
+        self.central_widget.addWidget(self.validator_screen)
 
+        # Set up the top-level menu
         self.create_menu()
 
-        self.adjustSize()  # ✅ Auto-size initially
+        # Show the home screen initially
+        self.show_home_screen()
 
     def create_menu(self):
-        """Creates a top menu bar with navigation options."""
-        menubar = self.menuBar()
-        file_menu = menubar.addMenu(_("File"))
+        """✅ Creates the top-level menu."""
+        menu_bar = self.menuBar()
 
-        # Feature Selection Actions
-        validate_action = QAction(_("Validate XLIFF"), self)
-        validate_action.triggered.connect(lambda: self.open_feature_screen(self.validator_screen, large=True))
+        # Language Menu
+        language_menu = menu_bar.addMenu(gettext_gettext("Language"))
+        change_language_action = QAction(gettext_gettext("Change Language"), self)
+        change_language_action.triggered.connect(self.show_language_selector)
+        language_menu.addAction(change_language_action)
 
-        lang_action = QAction(_("Change Language"), self)
-        lang_action.triggered.connect(lambda: self.open_feature_screen(self.language_selector, large=False))
+        # Exit Menu
+        exit_menu = menu_bar.addMenu(gettext_gettext("Exit"))
+        exit_action = QAction(gettext_gettext("Exit Application"), self)
+        exit_action.triggered.connect(self.close)
+        exit_menu.addAction(exit_action)
 
-        exit_action = QAction(_("Exit"), self)
-        exit_action.triggered.connect(self.close_application)
+    def show_home_screen(self):
+        """ ✅ Show Home Screen """
+        self.resize(600, 400)  # Make Home Screen smaller
+        self.central_widget.setCurrentWidget(self.home_screen)
 
-        file_menu.addAction(validate_action)
-        file_menu.addAction(lang_action)
-        file_menu.addSeparator()
-        file_menu.addAction(exit_action)
-
-    def open_feature_screen(self, screen, large=True):
-        """Switch screens with fade-in effect."""
-        self.fade_out_animation(lambda: self._switch_screen(screen, large))
-
-    def _switch_screen(self, screen, large):
-        """Switches to a feature screen and adjusts window size."""
-        self.stack.setCurrentWidget(screen)
-        
+    def open_feature_screen(self, screen, large=False):
+        """ ✅ Show the requested feature screen """
         if large:
-            self.resize(900, 600)  # ✅ Expand for Validator Screen
+            self.resize(1024, 768)  # Switch to larger mode
         else:
-            self.adjustSize()  # ✅ Auto-size smaller screens
+            self.resize(800, 600)  # Default size
+        self.central_widget.setCurrentWidget(screen)
 
-        self.fade_in_animation()
-
-    def go_home(self):
-        """Navigate back to the home screen with animation."""
-        self.fade_out_animation(lambda: self._switch_screen(self.home_screen, large=False))
-
-    def fade_out_animation(self, callback):
-        """Fades out the current screen before switching."""
-        self.animation = QPropertyAnimation(self, b"windowOpacity")
-        self.animation.setDuration(300)  # ✅ 300ms fade-out
-        self.animation.setStartValue(1.0)
-        self.animation.setEndValue(0.0)
-        self.animation.setEasingCurve(QEasingCurve.OutCubic)
-        self.animation.finished.connect(callback)
-        self.animation.start()
-
-    def fade_in_animation(self):
-        """Fades in the new screen after switching."""
-        self.animation = QPropertyAnimation(self, b"windowOpacity")
-        self.animation.setDuration(300)  # ✅ 300ms fade-in
-        self.animation.setStartValue(0.0)
-        self.animation.setEndValue(1.0)
-        self.animation.setEasingCurve(QEasingCurve.InCubic)
-        self.animation.start()
-
-    def close_application(self):
-        """Closes the application with fade-out effect."""
-        self.fade_out_animation(self.close)
+    def show_language_selector(self):
+        """ ✅ Placeholder for language selector functionality. """
+        print("Language selector not yet implemented.")
