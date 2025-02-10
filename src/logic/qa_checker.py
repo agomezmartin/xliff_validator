@@ -41,6 +41,9 @@ def check_segment(source, target):
     if has_mismatched_tags(source, target):
         return gettext_gettext("Mismatch/missing tag")
     
+    if target.startswith("#") and target.endswith("$"):
+        return gettext_gettext("Pseudotranslated")
+
     return gettext_gettext("Correct")
 
 def has_mismatched_tags(source, target):
