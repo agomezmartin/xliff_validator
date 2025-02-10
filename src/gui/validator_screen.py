@@ -102,6 +102,8 @@ class ValidatorScreen(QWidget):
                 return QColor(0, 128, 0)  # 🟢 Green for Correct
             elif gettext_gettext("Untranslated segment") in status:
                 return QColor(139, 69, 19)  # 🟤 Brown for Untranslated segment
+            elif gettext_gettext("Source missing") in status:
+                return QColor(255, 0, 0)  # 🔴 Red for Mismatch
             elif gettext_gettext("Mismatch/missing tag") in status:
                 return QColor(255, 0, 0)  # 🔴 Red for Mismatch
             elif gettext_gettext("Pseudotranslated") in status:
