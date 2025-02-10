@@ -1,4 +1,5 @@
 ﻿import xml.etree.ElementTree as ET
+import re
 import gettext
 
 gettext.bindtextdomain("messages", "locale")
@@ -38,16 +39,25 @@ def check_segment(source, target):
     if not target.strip():
         return gettext_gettext("Untranslated segment")
     
+    if not source.strip():
+        return gettext_gettext("Source missing")
+    
     if has_mismatched_tags(source, target):
         return gettext_gettext("Mismatch/missing tag")
     
     if target.startswith("#") and target.endswith("$"):
         return gettext_gettext("Pseudotranslated")
 
+    if target.startswith("_") and target.endswith("_"):
+        return gettext_gettext("Pseudotranslated")
+
     return gettext_gettext("Correct")
 
 def has_mismatched_tags(source, target):
-    """ ✅ Checks if tags are mismatched/missing. """
-    source_tags = {tag for tag in source.split() if tag.startswith("<") and tag.endswith(">")}
-    target_tags = {tag for tag in target.split() if tag.startswith("<") and tag.endswith(">")}
+    """ ✅ Checks if tags are mismatched/missing or out of order. """
+    # Use regular expression to extract tags and text content
+    source_tags = re.findall(r'<[^>]+>', source)
+    target_tags = re.findall(r'<[^>]+>', target)
+
+    # Check if the tags are the same in order and position
     return source_tags != target_tags
