@@ -23,8 +23,15 @@ def export_to_excel(validation_results, parent_window):
     if not file_path:
         return  # User cancelled
 
-    # Convert validation results into DataFrame
-    df = pd.DataFrame(validation_results, columns=[
+    # Add segment number to the results (starting from 1)
+    results_with_number = [
+        (index + 1, *result)  # Adding segment number at the start of each tuple
+        for index, result in enumerate(validation_results)
+    ]
+
+    # Convert validation results into DataFrame with the segment number
+    df = pd.DataFrame(results_with_number, columns=[
+        gettext_gettext("Segment Number"),
         gettext_gettext("Segment ID"),
         gettext_gettext("Source"),
         gettext_gettext("Target"),
@@ -41,10 +48,10 @@ def export_to_excel(validation_results, parent_window):
 
         # Define table format
         num_rows, num_cols = df.shape
-        table_range = f"A1:D{num_rows + 1}"  # Adjust for headers
+        table_range = f"A1:E{num_rows + 1}"  # Adjust for headers (now 5 columns)
         worksheet.add_table(table_range, {
             "columns": [{"header": col} for col in df.columns],
-            "style": "TableStyleMedium9"
+            "style": "TableStyleLight19"
         })
 
         # Freeze first row (headers)
