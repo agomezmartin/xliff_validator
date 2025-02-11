@@ -13,8 +13,12 @@ echo. > files.txt
 :: Loop through all Python files recursively and add to files.txt
 for /r %%i in (*.py) do echo %%i >> files.txt
 
+pause
+
 :: Generate the base .pot file inside "locale"
 xgettext --from-code=UTF-8 --language=Python -o locale/messages.pot -f files.txt
+
+pause
 
 :: Ask user if they want to create .po files
 set /p CREATE_PO="Do you want to create new language-specific .po files? (y/n): "
