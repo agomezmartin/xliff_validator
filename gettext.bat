@@ -2,7 +2,8 @@
 setlocal enabledelayedexpansion
 
 :: Define supported languages (modify as needed)
-set LANGUAGES=fr de es it
+REM set LANGUAGES=fr de es it
+set LANGUAGES=es
 
 :: Ensure "locale" directory exists
 if not exist locale mkdir locale
@@ -11,12 +12,25 @@ if not exist locale mkdir locale
 echo. > files.txt
 
 :: Loop through all Python files recursively and add to files.txt
-for /r %%i in (*.py) do echo %%i >> files.txt
+for /r %%i in (*.py) do (
+    echo Found: %%i
+    echo %%i >> files.txt
+)
 
 pause
 
 :: Generate the base .pot file inside "locale"
-xgettext --from-code=UTF-8 --language=Python -o locale/messages.pot -f files.txt
+REM xgettext --from-code=UTF-8 --language=Python -o locale/messages.pot -f files.txt
+
+:: Run xgettext with debugging
+xgettext --from-code=UTF-8 --keyword=gettext_gettext --output=locale/messages.pot --files-from=files.txt
+
+:: Verify if .pot file was created
+if exist locale\messages.pot (
+    echo Successfully created messages.pot!
+) else (
+    echo ERROR: Failed to generate messages.pot!
+)
 
 pause
 
