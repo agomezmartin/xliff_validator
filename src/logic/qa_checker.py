@@ -41,7 +41,10 @@ def check_segment(source, target):
     
     if not source.strip():
         return gettext_gettext("Source missing")
-    
+
+    if target==source:
+        return gettext_gettext("Source in target")
+
     if has_mismatched_tags(source, target):
         return gettext_gettext("Mismatch/missing tag")
     
