@@ -12,7 +12,7 @@ color 0B
 REM pyinstaller --log-level=DEBUG --noconsole --add-data "c:\xliff_validator\src\resources\*;src\img" --icon=c:\xliff_validator\src\resources\executable.png XLIFF_validator.py
 REM pyinstaller --onefile --log-level=DEBUG --noconsole --add-data "c:\xliff_validator\src\resources\*;src\img" --icon=c:\xliff_validator\src\resources\executable.png XLIFF_validator.py
 REM pyinstaller --onefile --noconsole --add-data "c:\xliff_validator\src\resources\*;src\img" --icon=c:\xliff_validator\src\resources\executable.png XLIFF_validator.py
-pyinstaller --onefile --noconsole --icon=c:\xliff_validator\src\resources\executable.png XLIFF_validator.py
+pyinstaller --onefile --noconsole --icon=c:\xliff_validator\src\resources\executable.ico XLIFF_validator.py
 
 color 0A
 echo ===========================================================================
