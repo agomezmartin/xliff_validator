@@ -1,11 +1,6 @@
 ﻿import xml.etree.ElementTree as ET
 import re
-import gettext
-
-gettext.bindtextdomain("messages", "locale")
-gettext.textdomain("messages")
-translation = gettext.translation("messages", "locale", fallback=True)
-gettext_gettext = translation.gettext
+from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
 def parse_xliff(file_path):
     """ ✅ Extracts XLIFF segments for QA validation. """
