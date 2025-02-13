@@ -3,13 +3,7 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
 from src.gui.file_handler import select_file
 from src.logic.qa_checker import parse_xliff
-import gettext
-
-# Initialize gettext for translations
-gettext.bindtextdomain("messages", "locale")
-gettext.textdomain("messages")
-translation = gettext.translation("messages", "locale", fallback=True)
-gettext_gettext = translation.gettext
+from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
 class HomeScreen(QWidget):
     def __init__(self, main_window):
