@@ -8,162 +8,162 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 16:29+0100\n"
+"POT-Creation-Date: 2025-02-13 14:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: C:\xliff_validator\src\gui\file_handler.py:18
+#: C:\xliff_validator\src\gui\file_handler.py:13
 msgid "Select an XLIFF File"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\file_handler.py:20
+#: C:\xliff_validator\src\gui\file_handler.py:15
 msgid "XLIFF Files (*.xlf *.xliff);;All Files (*)"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\file_handler.py:28
+#: C:\xliff_validator\src\gui\file_handler.py:23
 msgid "Error"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\file_handler.py:28
+#: C:\xliff_validator\src\gui\file_handler.py:23
 msgid "The selected file does not exist."
 msgstr ""
 
-#: C:\xliff_validator\src\gui\file_handler.py:33
+#: C:\xliff_validator\src\gui\file_handler.py:28
 msgid "Invalid File"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\file_handler.py:33
+#: C:\xliff_validator\src\gui\file_handler.py:28
 msgid "Please select a valid XLIFF file (.xlf or .xliff)."
 msgstr ""
 
-#: C:\xliff_validator\src\gui\home_screen.py:24
+#: C:\xliff_validator\src\gui\home_screen.py:18
 msgid "Welcome to XLIFF Validator"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\home_screen.py:30
+#: C:\xliff_validator\src\gui\home_screen.py:24
 msgid "Validate XLIFF"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\main_window.py:19
+#: C:\xliff_validator\src\gui\main_window.py:13
 msgid "XLIFF Validator"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\main_window.py:42
+#: C:\xliff_validator\src\gui\main_window.py:36
 msgid "File"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\main_window.py:46
+#: C:\xliff_validator\src\gui\main_window.py:40
 msgid "Validate XLIFF File"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\main_window.py:51
+#: C:\xliff_validator\src\gui\main_window.py:45
 msgid "Exit"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:27
-#: C:\xliff_validator\src\gui\validator_screen.py:62
+#: C:\xliff_validator\src\gui\validator_screen.py:21
+#: C:\xliff_validator\src\gui\validator_screen.py:56
 msgid "Open XLIFF File"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:33
+#: C:\xliff_validator\src\gui\validator_screen.py:27
 msgid "XLIFF Validation Report"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:42
+#: C:\xliff_validator\src\gui\validator_screen.py:36
 msgid "Export to Excel"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:48
+#: C:\xliff_validator\src\gui\validator_screen.py:42
 msgid "Back to Home"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:58
+#: C:\xliff_validator\src\gui\validator_screen.py:52
 msgid "XLIFF Files (*.xliff *.xml)"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:66
+#: C:\xliff_validator\src\gui\validator_screen.py:60
 msgid "No file selected."
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:79
-#: C:\xliff_validator\src\logic\excel_exporter.py:35
+#: C:\xliff_validator\src\gui\validator_screen.py:73
+#: C:\xliff_validator\src\logic\excel_exporter.py:29
 msgid "Segment ID"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:80
-#: C:\xliff_validator\src\logic\excel_exporter.py:36
+#: C:\xliff_validator\src\gui\validator_screen.py:74
+#: C:\xliff_validator\src\logic\excel_exporter.py:30
 msgid "Source"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:81
-#: C:\xliff_validator\src\logic\excel_exporter.py:37
+#: C:\xliff_validator\src\gui\validator_screen.py:75
+#: C:\xliff_validator\src\logic\excel_exporter.py:31
 msgid "Target"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:82
-#: C:\xliff_validator\src\logic\excel_exporter.py:38
+#: C:\xliff_validator\src\gui\validator_screen.py:76
+#: C:\xliff_validator\src\logic\excel_exporter.py:32
 msgid "QA Status"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:101
-#: C:\xliff_validator\src\logic\qa_checker.py:57
+#: C:\xliff_validator\src\gui\validator_screen.py:95
+#: C:\xliff_validator\src\logic\qa_checker.py:52
 msgid "Correct"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:103
-#: C:\xliff_validator\src\logic\qa_checker.py:40
+#: C:\xliff_validator\src\gui\validator_screen.py:97
+#: C:\xliff_validator\src\logic\qa_checker.py:35
 msgid "Untranslated segment"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:105
-#: C:\xliff_validator\src\logic\qa_checker.py:46
+#: C:\xliff_validator\src\gui\validator_screen.py:99
+#: C:\xliff_validator\src\logic\qa_checker.py:41
 msgid "Source in target"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:107
-#: C:\xliff_validator\src\logic\qa_checker.py:43
+#: C:\xliff_validator\src\gui\validator_screen.py:101
+#: C:\xliff_validator\src\logic\qa_checker.py:38
 msgid "Source missing"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:109
-#: C:\xliff_validator\src\logic\qa_checker.py:49
+#: C:\xliff_validator\src\gui\validator_screen.py:103
+#: C:\xliff_validator\src\logic\qa_checker.py:44
 msgid "Mismatch/missing tag"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:111
-#: C:\xliff_validator\src\logic\qa_checker.py:52
-#: C:\xliff_validator\src\logic\qa_checker.py:55
+#: C:\xliff_validator\src\gui\validator_screen.py:105
+#: C:\xliff_validator\src\logic\qa_checker.py:47
+#: C:\xliff_validator\src\logic\qa_checker.py:50
 msgid "Pseudotranslated"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:120
+#: C:\xliff_validator\src\gui\validator_screen.py:114
 msgid "No validation results to export."
 msgstr ""
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:18
+#: C:\xliff_validator\src\logic\excel_exporter.py:12
 msgid "Save Excel File"
 msgstr ""
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:20
+#: C:\xliff_validator\src\logic\excel_exporter.py:14
 msgid "Excel Files (*.xlsx)"
 msgstr ""
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:34
+#: C:\xliff_validator\src\logic\excel_exporter.py:28
 msgid "Segment Number"
 msgstr ""
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:60
+#: C:\xliff_validator\src\logic\excel_exporter.py:54
 msgid "Excel export completed successfully!"
 msgstr ""
 
-#: C:\xliff_validator\src\logic\qa_checker.py:33
+#: C:\xliff_validator\src\logic\qa_checker.py:28
 msgid "Error: The XLIFF file is corrupted or unreadable."
 msgstr ""
 
-#: C:\xliff_validator\src\logic\qa_checker.py:35
+#: C:\xliff_validator\src\logic\qa_checker.py:30
 msgid "Error: "
 msgstr ""
