@@ -22,7 +22,7 @@ msgstr "_Adquirir ms pagarse tomas_"
 
 #: C:\xliff_validator\src\gui\file_handler.py:15
 msgid "XLIFF Files (*.xlf *.xliff);;All Files (*)"
-msgstr "_Limpios tensin (*.Voor *.activas);;mate fijados (*)_"
+msgstr "_Limpios tensin (*.xlf *.xliff);;mate fijados (*)_"
 
 #: C:\xliff_validator\src\gui\file_handler.py:23
 msgid "Error"
@@ -38,7 +38,7 @@ msgstr "_Instalar plomo_"
 
 #: C:\xliff_validator\src\gui\file_handler.py:28
 msgid "Please select a valid XLIFF file (.xlf or .xliff)."
-msgstr "_Ampliar Myosotis o laboral francas huevo (.mg/l son .vuelvan)._"
+msgstr "_Ampliar Myosotis o laboral francas huevo (.xlf .vuelvan .xliff)._"
 
 #: C:\xliff_validator\src\gui\home_screen.py:18
 msgid "Welcome to XLIFF Validator"
@@ -83,7 +83,7 @@ msgstr "_Sirva del ellas_"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:52
 msgid "XLIFF Files (*.xliff *.xml)"
-msgstr "_Vidrios cerrado (*.Quercus *.Isla)_"
+msgstr "_Vidrios cerrado (*.xliff *.xml)_"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:60
 msgid "No file selected."
@@ -150,7 +150,7 @@ msgstr "_Local derecho Svent_"
 
 #: C:\xliff_validator\src\logic\excel_exporter.py:14
 msgid "Excel Files (*.xlsx)"
-msgstr "_Qumica litigio (*.Silva)_"
+msgstr "_Qumica litigio (*.xlsx)_"
 
 #: C:\xliff_validator\src\logic\excel_exporter.py:28
 msgid "Segment Number"
