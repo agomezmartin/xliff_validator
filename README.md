@@ -24,7 +24,7 @@ xliff_validator/
 │   │   │   ├── messages.mo		(Binary language-specific file)
 │── src/
 │   ├── utils/
-│   │   ├── i18n.py				(Set language)
+│   │   ├── i18n.py			(Set language)
 │── XLIFF_validator.py
 ```
 ## Important Notes
