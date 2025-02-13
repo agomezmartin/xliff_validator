@@ -1,12 +1,6 @@
 ﻿import pandas as pd
 from PySide6.QtWidgets import QFileDialog
-import gettext
-
-# Initialize gettext for translations
-gettext.bindtextdomain("messages", "locale")
-gettext.textdomain("messages")
-translation = gettext.translation("messages", "locale", fallback=True)
-gettext_gettext = translation.gettext
+from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
 def export_to_excel(validation_results, parent_window):
     """
