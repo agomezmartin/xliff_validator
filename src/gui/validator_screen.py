@@ -3,13 +3,7 @@ from PySide6.QtGui import QColor
 from PySide6.QtCore import Qt
 from src.logic.qa_checker import parse_xliff
 from src.logic.excel_exporter import export_to_excel
-import gettext
-
-# Initialize gettext for translations
-gettext.bindtextdomain("messages", "locale")
-gettext.textdomain("messages")
-translation = gettext.translation("messages", "locale", fallback=True)
-gettext_gettext = translation.gettext
+from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
 class ValidatorScreen(QWidget):
     def __init__(self, main_window):
