@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-13 13:04+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: C:\xliff_validator\src\gui\file_handler.py:13
+msgid "Select an XLIFF File"
+msgstr "_Adquirir ms pagarse tomas_"
+
+#: C:\xliff_validator\src\gui\file_handler.py:15
+msgid "XLIFF Files (*.xlf *.xliff);;All Files (*)"
+msgstr "_Limpios tensin (*.Voor *.activas);;mate fijados (*)_"
+
+#: C:\xliff_validator\src\gui\file_handler.py:23
+msgid "Error"
+msgstr "_Campaa_"
+
+#: C:\xliff_validator\src\gui\file_handler.py:23
+msgid "The selected file does not exist."
+msgstr "_Base analizarn Verde Bolle giro cdigos._"
+
+#: C:\xliff_validator\src\gui\file_handler.py:28
+msgid "Invalid File"
+msgstr "_Instalar plomo_"
+
+#: C:\xliff_validator\src\gui\file_handler.py:28
+msgid "Please select a valid XLIFF file (.xlf or .xliff)."
+msgstr "_Ampliar Myosotis o laboral francas huevo (.mg/l son .vuelvan)._"
+
+#: C:\xliff_validator\src\gui\home_screen.py:18
+msgid "Welcome to XLIFF Validator"
+msgstr "_Explcita and equipos denominacin_"
+
+#: C:\xliff_validator\src\gui\home_screen.py:24
+msgid "Validate XLIFF"
+msgstr "_Suspender impidan_"
+
+#: C:\xliff_validator\src\gui\main_window.py:13
+msgid "XLIFF Validator"
+msgstr "_rbitro remuneracin_"
+
+#: C:\xliff_validator\src\gui\main_window.py:36
+msgid "File"
+msgstr "_Guin_"
+
+#: C:\xliff_validator\src\gui\main_window.py:40
+msgid "Validate XLIFF File"
+msgstr "_Individual fijarse SOLAS_"
+
+#: C:\xliff_validator\src\gui\main_window.py:45
+msgid "Exit"
+msgstr "_Pleno_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:21
+#: C:\xliff_validator\src\gui\validator_screen.py:56
+msgid "Open XLIFF File"
+msgstr "_Tomen minimas della_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:27
+msgid "XLIFF Validation Report"
+msgstr "_Remitan aseguramiento ultimar_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:36
+msgid "Export to Excel"
+msgstr "_Agrarios XIV incluir_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:42
+msgid "Back to Home"
+msgstr "_Sirva del ellas_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:52
+msgid "XLIFF Files (*.xliff *.xml)"
+msgstr "_Vidrios cerrado (*.Quercus *.Isla)_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:60
+msgid "No file selected."
+msgstr "_Hoc TRANS adherencia._"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:73
+#: C:\xliff_validator\src\logic\excel_exporter.py:29
+msgid "Segment ID"
+msgstr "_Proyectos ro_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:74
+#: C:\xliff_validator\src\logic\excel_exporter.py:30
+msgid "Source"
+msgstr "_Reciente_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:75
+#: C:\xliff_validator\src\logic\excel_exporter.py:31
+msgid "Target"
+msgstr "_Africana_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:76
+#: C:\xliff_validator\src\logic\excel_exporter.py:32
+msgid "QA Status"
+msgstr "_Con resulten_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:95
+#: C:\xliff_validator\src\logic\qa_checker.py:52
+msgid "Correct"
+msgstr "_Semejante_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:97
+#: C:\xliff_validator\src\logic\qa_checker.py:35
+msgid "Untranslated segment"
+msgstr "_Discriminatorias formacin_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:99
+#: C:\xliff_validator\src\logic\qa_checker.py:41
+msgid "Source in target"
+msgstr "_Fusionen log evaluado_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:101
+#: C:\xliff_validator\src\logic\qa_checker.py:38
+msgid "Source missing"
+msgstr "_Litigios HURFANOS_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:103
+#: C:\xliff_validator\src\logic\qa_checker.py:44
+msgid "Mismatch/missing tag"
+msgstr "_Kilmetros/acuticas todo_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:105
+#: C:\xliff_validator\src\logic\qa_checker.py:47
+#: C:\xliff_validator\src\logic\qa_checker.py:50
+msgid "Pseudotranslated"
+msgstr "_Aprovisionamiento o a _"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:114
+msgid "No validation results to export."
+msgstr "_Ojo estableciendo sometidos Fr contina._"
+
+#: C:\xliff_validator\src\logic\excel_exporter.py:12
+msgid "Save Excel File"
+msgstr "_Local derecho Svent_"
+
+#: C:\xliff_validator\src\logic\excel_exporter.py:14
+msgid "Excel Files (*.xlsx)"
+msgstr "_Qumica litigio (*.Silva)_"
+
+#: C:\xliff_validator\src\logic\excel_exporter.py:28
+msgid "Segment Number"
+msgstr "_Aerosoles tamizado_"
+
+#: C:\xliff_validator\src\logic\excel_exporter.py:54
+msgid "Excel export completed successfully!"
+msgstr "_Aporten visibles recopilacin jurisdiccionales!_"
+
+#: C:\xliff_validator\src\logic\qa_checker.py:28
+msgid "Error: The XLIFF file is corrupted or unreadable."
+msgstr "_Probar:_ _Alta escrita roble MAC conducciones LMR honorabilidad._"
+
+#: C:\xliff_validator\src\logic\qa_checker.py:30
+msgid "Error: "
+msgstr "_Semanas:_ "
