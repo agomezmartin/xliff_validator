@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-13 13:04+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: C:\xliff_validator\src\gui\file_handler.py:13
+msgid "Select an XLIFF File"
+msgstr "_Chambres blé assurer issue_"
+
+#: C:\xliff_validator\src\gui\file_handler.py:15
+msgid "XLIFF Files (*.xlf *.xliff);;All Files (*)"
+msgstr "_Limitée platine (*.xlf *.xliff);;sons schémas (*)_"
+
+#: C:\xliff_validator\src\gui\file_handler.py:23
+msgid "Error"
+msgstr "_Danoise_"
+
+#: C:\xliff_validator\src\gui\file_handler.py:23
+msgid "The selected file does not exist."
+msgstr "_VRAC ammoniaque objet tabac doré instant._"
+
+#: C:\xliff_validator\src\gui\file_handler.py:28
+msgid "Invalid File"
+msgstr "_Déplaçant quant_"
+
+#: C:\xliff_validator\src\gui\file_handler.py:28
+msgid "Please select a valid XLIFF file (.xlf or .xliff)."
+msgstr "_Vérifiés naturels è Inertie ECHEANT situe (.xlf dès .xliff)._"
+
+#: C:\xliff_validator\src\gui\home_screen.py:18
+msgid "Welcome to XLIFF Validator"
+msgstr "_Qualifiés DCI auteurs incinération_"
+
+#: C:\xliff_validator\src\gui\home_screen.py:24
+msgid "Validate XLIFF"
+msgstr "_Tuyauterie certain_"
+
+#: C:\xliff_validator\src\gui\main_window.py:13
+msgid "XLIFF Validator"
+msgstr "_Usagers substitution_"
+
+#: C:\xliff_validator\src\gui\main_window.py:36
+msgid "File"
+msgstr "_Âgées_"
+
+#: C:\xliff_validator\src\gui\main_window.py:40
+msgid "Validate XLIFF File"
+msgstr "_Constatant ouverte revêt_"
+
+#: C:\xliff_validator\src\gui\main_window.py:45
+msgid "Exit"
+msgstr "_OPCVM_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:21
+#: C:\xliff_validator\src\gui\validator_screen.py:56
+msgid "Open XLIFF File"
+msgstr "_Mol/l évalués cidre_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:27
+msgid "XLIFF Validation Report"
+msgstr "_Projets indépendantes résulter_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:36
+msgid "Export to Excel"
+msgstr "_Slovénie bis enlevée_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:42
+msgid "Back to Home"
+msgstr "_GARNI OIL seuls_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:52
+msgid "XLIFF Files (*.xliff *.xml)"
+msgstr "_Traitée établie (*.xliff *.xml)_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:60
+msgid "No file selected."
+msgstr "_Nºs avril EVENTUELLE._"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:73
+#: C:\xliff_validator\src\logic\excel_exporter.py:29
+msgid "Segment ID"
+msgstr "_Important foi_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:74
+#: C:\xliff_validator\src\logic\excel_exporter.py:30
+msgid "Source"
+msgstr "_Produire_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:75
+#: C:\xliff_validator\src\logic\excel_exporter.py:31
+msgid "Target"
+msgstr "_Laminage_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:76
+#: C:\xliff_validator\src\logic\excel_exporter.py:32
+msgid "QA Status"
+msgstr "_MM. conserve_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:95
+#: C:\xliff_validator\src\logic\qa_checker.py:52
+msgid "Correct"
+msgstr "_AUTORISES_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:97
+#: C:\xliff_validator\src\logic\qa_checker.py:35
+msgid "Untranslated segment"
+msgstr "_Perpendiculaires réduisant_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:99
+#: C:\xliff_validator\src\logic\qa_checker.py:41
+msgid "Source in target"
+msgstr "_Fournies nom classeur_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:101
+#: C:\xliff_validator\src\logic\qa_checker.py:38
+msgid "Source missing"
+msgstr "_Pratique trifolium_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:103
+#: C:\xliff_validator\src\logic\qa_checker.py:44
+msgid "Mismatch/missing tag"
+msgstr "_Inhibition/maquettes Iris_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:105
+#: C:\xliff_validator\src\logic\qa_checker.py:47
+#: C:\xliff_validator\src\logic\qa_checker.py:50
+msgid "Pseudotranslated"
+msgstr "_Non-commercialisation_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:114
+msgid "No validation results to export."
+msgstr "_Que précipitation employées Gin Nacional._"
+
+#: C:\xliff_validator\src\logic\excel_exporter.py:12
+msgid "Save Excel File"
+msgstr "_Liées sativum botte_"
+
+#: C:\xliff_validator\src\logic\excel_exporter.py:14
+msgid "Excel Files (*.xlsx)"
+msgstr "_Manière réponse (*.xlsx)_"
+
+#: C:\xliff_validator\src\logic\excel_exporter.py:28
+msgid "Segment Number"
+msgstr "_Découpées BELGIQUE_"
+
+#: C:\xliff_validator\src\logic\excel_exporter.py:54
+msgid "Excel export completed successfully!"
+msgstr "_Fournir mélangés gouvernement particulièrement!_"
+
+#: C:\xliff_validator\src\logic\qa_checker.py:28
+msgid "Error: The XLIFF file is corrupted or unreadable."
+msgstr "_Méthyle:_ _Donc anchois unies Pas dessiccateur etc DEMONSTRATION._"
+
+#: C:\xliff_validator\src\logic\qa_checker.py:30
+msgid "Error: "
+msgstr "_Occupée:_ "
