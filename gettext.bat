@@ -32,7 +32,7 @@ if /I "%CREATE_POT%"=="y" (
         REM xgettext --from-code=UTF-8 --language=Python -o locale/messages.pot -f files.txt
 
         :: Run xgettext with debugging
-        xgettext --from-code=UTF-8 --keyword=gettext_gettext --output=locale/messages.pot --files-from=files.txt
+        xgettext --from-code=UTF-8 --keyword=gettext_gettext --output=locale/messages.pot --charset=UTF-8 --files-from=files.txt
 
         :: Verify if .pot file was created
         if exist locale\messages.pot (
