@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 
 :: Define supported languages (modify as needed)
 REM set LANGUAGES=fr de es it
-set LANGUAGES=es
+set LANGUAGES=es fr
 
 :: Ensure "locale" directory exists
 if not exist locale mkdir locale
@@ -11,25 +11,35 @@ if not exist locale mkdir locale
 :: Create or clear files.txt
 echo. > files.txt
 
+@echo ========================================================================
+@echo Files to be analyzed for text extraction:
+@echo ------------------------------------------------------------------------
+
 :: Loop through all Python files recursively and add to files.txt
 for /r %%i in (*.py) do (
-    echo Found: %%i
+    echo %%i
     echo %%i >> files.txt
 )
+@echo ========================================================================
 
 pause
 
-:: Generate the base .pot file inside "locale"
-REM xgettext --from-code=UTF-8 --language=Python -o locale/messages.pot -f files.txt
+:: Ask user if they want to create main .pot file
+set /p CREATE_POT="Do you want to create new source English .pot file? (y/n): "
 
-:: Run xgettext with debugging
-xgettext --from-code=UTF-8 --keyword=gettext_gettext --output=locale/messages.pot --files-from=files.txt
+if /I "%CREATE_POT%"=="y" (
+        :: Generate the base .pot file inside "locale"
+        REM xgettext --from-code=UTF-8 --language=Python -o locale/messages.pot -f files.txt
 
-:: Verify if .pot file was created
-if exist locale\messages.pot (
-    echo Successfully created messages.pot!
-) else (
-    echo ERROR: Failed to generate messages.pot!
+        :: Run xgettext with debugging
+        xgettext --from-code=UTF-8 --keyword=gettext_gettext --output=locale/messages.pot --files-from=files.txt
+
+        :: Verify if .pot file was created
+        if exist locale\messages.pot (
+            echo Successfully created messages.pot!
+        ) else (
+            echo ERROR: Failed to generate messages.pot!
+        )
 )
 
 pause
@@ -77,5 +87,7 @@ if /I "%CREATE_MO%"=="y" (
 :: Clean up files.txt
 del files.txt
 
-@echo Done! Localization setup is complete.
+@echo ========================================================================
+@echo Done: Localization setup is complete.
+@echo ========================================================================
 pause
