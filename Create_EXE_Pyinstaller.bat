@@ -20,20 +20,6 @@ pyinstaller --add-data "locale;locale" --onefile --noconsole --icon=c:\xliff_val
 
 echo Build complete!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 color 0A
 echo ===========================================================================
 echo File "XLIFF_validator.py" has been compiled to .exe
