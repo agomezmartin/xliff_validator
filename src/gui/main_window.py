@@ -3,13 +3,7 @@ from PySide6.QtGui import QAction
 from src.gui.home_screen import HomeScreen
 from src.gui.validator_screen import ValidatorScreen
 from PySide6.QtCore import Qt
-import gettext
-
-# Initialize gettext for translations
-gettext.bindtextdomain("messages", "locale")
-gettext.textdomain("messages")
-translation = gettext.translation("messages", "locale", fallback=True)
-gettext_gettext = translation.gettext
+from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
 class MainWindow(QMainWindow):
     def __init__(self):
