@@ -1,11 +1,6 @@
 ﻿from PySide6.QtWidgets import QFileDialog, QMessageBox
 import os
-import gettext
-
-gettext.bindtextdomain("messages", "locale")
-gettext.textdomain("messages")
-translation = gettext.translation("messages", "locale", fallback=True)
-gettext_gettext = translation.gettext
+from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
 def select_file():
     """
