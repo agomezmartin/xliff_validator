@@ -15,7 +15,7 @@ class HomeScreen(QWidget):
         font = QFont("Quicksand", 24)
 
         # ✅ Welcome Label
-        label = QLabel(gettext_gettext("Welcome to XLIFF Validator"))
+        label = QLabel(gettext_gettext("Welcome to XLIFF Validator").upper())
         label.setFont(font)
         label.setAlignment(Qt.AlignCenter)
         layout.addWidget(label)
