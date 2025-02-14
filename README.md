@@ -61,6 +61,7 @@ xliff_validator/
 │   │   ├── file_handler.py   (Handles file selection)
 │   ├── logic/
 │   │   ├── qa_checker.py     (Validates XLIFF segments)
+│   │   ├── xliff_parser.py   (Parses XLIFF files and extracts segments)
 │   │   ├── excel_exporter.py (Exports validation results to Excel)
 │   ├── utils/
 │   │   ├── i18n.py           (Handles internationalization, imports `localedir` from `compiler.py`)
