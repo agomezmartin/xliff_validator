@@ -1,5 +1,5 @@
 ﻿import gettext
-from src.utils.compiler import localedir
+from src.utils.compiler import localedir # ✅ Import locale or _internal/locale variable
 
 # ✅ Set the language for the application
 LANGUAGE = "fr"  # Change to "en" for English, "es" for Spanish or "fr" for French.
