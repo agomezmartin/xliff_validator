@@ -36,39 +36,6 @@ To run the validator, execute the main script:
 python XLIFF_validator.py
 ```
 
-## Full project
-
-```
-xliff_validator/
-│── locale/
-│   ├── messages.pot         (Main source English file)
-│   ├── es/
-│   │   ├── LC_MESSAGES/
-│   │   │   ├── messages.po  (Translated language-specific file)
-│   │   │   ├── messages.mo  (Binary language-specific file)
-│   ├── en/
-│   │   ├── LC_MESSAGES/
-│   │   │   ├── messages.po
-│   │   │   ├── messages.mo
-│── src/
-│   ├── gui/
-│   │   ├── main_window.py    (Main UI window)
-│   │   ├── home_screen.py    (Home screen UI)
-│   │   ├── validator_screen.py (Validation results screen)
-│   │   ├── file_handler.py   (Handles file selection)
-│   ├── logic/
-│   │   ├── qa_checker.py     (Validates XLIFF segments)
-│   │   ├── excel_exporter.py (Exports validation results to Excel)
-│   ├── utils/
-│   │   ├── i18n.py           (Handles internationalization, imports `localedir` from `compiler.py`)
-│   │   ├── compiler.py       (Determines the correct locale directory for translations)
-│── XLIFF_validator.py        (Entry point of the application)
-
-│── dist/                     (Final executable output from PyInstaller)
-│   ├── XLIFF_validator/      (Contains extracted files when running in standard mode)
-│   │   ├── _internal/
-│   │   │   ├── locale/       (Holds compiled `.mo` translation files)
-│   │   ├── XLIFF_validator.exe (Executable file)
-```
 ## License
 This project is licensed under [MIT License](LICENSE).
+
