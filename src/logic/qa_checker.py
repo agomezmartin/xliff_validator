@@ -49,10 +49,6 @@ def check_segment(source, target):
 
     return gettext_gettext("Correct")
 
-    """ ✅ Checks if tags are mismatched/missing or out of order. """
-    # Use regular expression to extract tags and text content
-    # ✅ Use sets instead of lists for faster comparison
-
 def has_mismatched_tags(source, target):
     """Checks if tags are mismatched, missing, out of order, or incorrectly nested."""
     
