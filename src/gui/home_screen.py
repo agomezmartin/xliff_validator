@@ -11,8 +11,8 @@ class HomeScreen(QWidget):
         self.main_window = main_window
         layout = QVBoxLayout()
 
-        # ✅ Apply Quicksand Font (Size 24)
-        font = QFont("Poppins", 24)
+        # ✅ Apply Lato Font (Size 24)
+        font = QFont("Lato", 24, QFont.Light)  # Font size 24, light weight
 
         # ✅ Welcome Label
         label = QLabel(gettext_gettext("Welcome to XLIFF Validator").upper())
