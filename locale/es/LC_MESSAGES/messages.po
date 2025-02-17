@@ -18,152 +18,152 @@ msgstr ""
 
 #: C:\xliff_validator\src\gui\file_handler.py:13
 msgid "Select an XLIFF File"
-msgstr "_Adquirir ms pagarse tomas_"
+msgstr "Seleccione un archivo XLIFF"
 
 #: C:\xliff_validator\src\gui\file_handler.py:15
 msgid "XLIFF Files (*.xlf *.xliff);;All Files (*)"
-msgstr "_Limpios tensin (*.xlf *.xliff);;mate fijados (*)_"
+msgstr "Archivos XLIFF (*.xlf *.xliff);;Todos los archivos (*)"
 
 #: C:\xliff_validator\src\gui\file_handler.py:23
 msgid "Error"
-msgstr "_Campaa_"
+msgstr "Error"
 
 #: C:\xliff_validator\src\gui\file_handler.py:23
 msgid "The selected file does not exist."
-msgstr "_Base analizarn Verde Bolle giro cdigos._"
+msgstr "Los archivos seleccionados no existen."
 
 #: C:\xliff_validator\src\gui\file_handler.py:28
 msgid "Invalid File"
-msgstr "_Instalar plomo_"
+msgstr "El archivo no es válido"
 
 #: C:\xliff_validator\src\gui\file_handler.py:28
 msgid "Please select a valid XLIFF file (.xlf or .xliff)."
-msgstr "_Ampliar Myosotis o laboral francas huevo (.xlf .vuelvan .xliff)._"
+msgstr "Seleccione un archivo XLIFF válido (.xlf o .xliff)."
 
 #: C:\xliff_validator\src\gui\home_screen.py:18
 msgid "Welcome to XLIFF Validator"
-msgstr "_Explcita and equipos denominacin_"
+msgstr "Validador de archivos XLIFF"
 
 #: C:\xliff_validator\src\gui\home_screen.py:24
 msgid "Validate XLIFF"
-msgstr "_Suspender impidan_"
+msgstr "Validar XLIFF"
 
 #: C:\xliff_validator\src\gui\main_window.py:13
 msgid "XLIFF Validator"
-msgstr "_rbitro remuneracin_"
+msgstr "Validador de archivos XLIFF"
 
 #: C:\xliff_validator\src\gui\main_window.py:36
 msgid "File"
-msgstr "_Guin_"
+msgstr "Archivo"
 
 #: C:\xliff_validator\src\gui\main_window.py:40
 msgid "Validate XLIFF File"
-msgstr "_Individual fijarse SOLAS_"
+msgstr "Validar archivo XLIFF"
 
 #: C:\xliff_validator\src\gui\main_window.py:45
 msgid "Exit"
-msgstr "_Pleno_"
+msgstr "Salir"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:21
 #: C:\xliff_validator\src\gui\validator_screen.py:56
 msgid "Open XLIFF File"
-msgstr "_Tomen minimas della_"
+msgstr "Abrir archivo XLIFF"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:27
 msgid "XLIFF Validation Report"
-msgstr "_Remitan aseguramiento ultimar_"
+msgstr "Resultado de la validación"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:36
 msgid "Export to Excel"
-msgstr "_Agrarios XIV incluir_"
+msgstr "Exportar a Excel"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:42
 msgid "Back to Home"
-msgstr "_Sirva del ellas_"
+msgstr "Volver al inicio"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:52
 msgid "XLIFF Files (*.xliff *.xml)"
-msgstr "_Vidrios cerrado (*.xliff *.xml)_"
+msgstr "Archivos XLIFF (*.xliff *.xml)_"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:60
 msgid "No file selected."
-msgstr "_Hoc TRANS adherencia._"
+msgstr "No se ha seleccionado ningún archivo."
 
 #: C:\xliff_validator\src\gui\validator_screen.py:73
 #: C:\xliff_validator\src\logic\excel_exporter.py:29
 msgid "Segment ID"
-msgstr "_Proyectos ro_"
+msgstr "ID del segmento"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:74
 #: C:\xliff_validator\src\logic\excel_exporter.py:30
 msgid "Source"
-msgstr "_Reciente_"
+msgstr "Original"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:75
 #: C:\xliff_validator\src\logic\excel_exporter.py:31
 msgid "Target"
-msgstr "_Africana_"
+msgstr "Traducción"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:76
 #: C:\xliff_validator\src\logic\excel_exporter.py:32
 msgid "QA Status"
-msgstr "_Con resulten_"
+msgstr "Resultado"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:95
 #: C:\xliff_validator\src\logic\qa_checker.py:52
 msgid "Correct"
-msgstr "_Semejante_"
+msgstr "Correcto"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:97
 #: C:\xliff_validator\src\logic\qa_checker.py:35
 msgid "Untranslated segment"
-msgstr "_Discriminatorias formacin_"
+msgstr "Segmento sin traducir"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:99
 #: C:\xliff_validator\src\logic\qa_checker.py:41
 msgid "Source in target"
-msgstr "_Fusionen log evaluado_"
+msgstr "Original en traducción"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:101
 #: C:\xliff_validator\src\logic\qa_checker.py:38
 msgid "Source missing"
-msgstr "_Litigios HURFANOS_"
+msgstr "Original vacío"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:103
 #: C:\xliff_validator\src\logic\qa_checker.py:44
 msgid "Mismatch/missing tag"
-msgstr "_Kilmetros/acuticas todo_"
+msgstr "Error en etiquetas internas"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:105
 #: C:\xliff_validator\src\logic\qa_checker.py:47
 #: C:\xliff_validator\src\logic\qa_checker.py:50
 msgid "Pseudotranslated"
-msgstr "_Aprovisionamiento o a _"
+msgstr "Pseudotraducido"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:114
 msgid "No validation results to export."
-msgstr "_Ojo estableciendo sometidos Fr contina._"
+msgstr "No hay resultados para exportar."
 
 #: C:\xliff_validator\src\logic\excel_exporter.py:12
 msgid "Save Excel File"
-msgstr "_Local derecho Svent_"
+msgstr "Guardar archivo Excel"
 
 #: C:\xliff_validator\src\logic\excel_exporter.py:14
 msgid "Excel Files (*.xlsx)"
-msgstr "_Qumica litigio (*.xlsx)_"
+msgstr "Archivos Excel (*.xlsx)"
 
 #: C:\xliff_validator\src\logic\excel_exporter.py:28
 msgid "Segment Number"
-msgstr "_Aerosoles tamizado_"
+msgstr "Número de segmento"
 
 #: C:\xliff_validator\src\logic\excel_exporter.py:54
 msgid "Excel export completed successfully!"
-msgstr "_Aporten visibles recopilacin jurisdiccionales!_"
+msgstr "Se ha guardado el archivo Excel correctamente."
 
 #: C:\xliff_validator\src\logic\qa_checker.py:28
 msgid "Error: The XLIFF file is corrupted or unreadable."
-msgstr "_Probar:_ _Alta escrita roble MAC conducciones LMR honorabilidad._"
+msgstr "Error: El archivo XLIFF no se puede leer o está corrupto."
 
 #: C:\xliff_validator\src\logic\qa_checker.py:30
 msgid "Error: "
-msgstr "_Semanas:_ "
+msgstr "Error: "
