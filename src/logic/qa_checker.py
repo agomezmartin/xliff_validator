@@ -49,11 +49,32 @@ def check_segment(source, target):
 
     return gettext_gettext("Correct")
 
-def has_mismatched_tags(source, target):
     """ ✅ Checks if tags are mismatched/missing or out of order. """
     # Use regular expression to extract tags and text content
     # ✅ Use sets instead of lists for faster comparison
-    return set(re.findall(r'<[^>]+>', source)) != set(re.findall(r'<[^>]+>', target))
+
+def has_mismatched_tags(source, target):
+    """Checks if tags are mismatched, missing, out of order, or incorrectly nested."""
+    
+    def extract_tags(segment):
+        """Extracts tags and checks for proper nesting using a stack."""
+        tags = re.findall(r'</?[^>]+>', segment)  # Extract all tags using regular expressions
+        stack = []  # Stack to check nesting
+        
+        for tag in tags:
+            if not tag.startswith("</"):  # Opening tag
+                stack.append(tag)
+            else:  # Closing tag
+                if not stack:
+                    return False  # Unmatched closing tag
+                
+                last_tag = stack.pop()
+                if last_tag[1:] != tag[2:]:  # Compare <tag> with </tag>
+                    return False  # Mismatched tag
+        
+        return not stack  # ✅ If stack is empty, nesting is correct
+
+    return extract_tags(source) != extract_tags(target) # ✅ Tags in both source and target segments are checked. Returns TRUE if mismatches are found.
 
 def is_pseudotranslated(target):
     """ ✅ Checks if target text follows pseudotranslation patterns. """
