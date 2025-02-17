@@ -2,14 +2,15 @@
 import re
 from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
+# ✅ Define XLIFF namespace (avoids repeated dictionary creation)
+ns = {"xliff": "urn:oasis:names:tc:xliff:document:1.2"}  # XLIFF 1.2 namespace
+
 def parse_xliff(file_path):
     """ ✅ Extracts XLIFF segments for QA validation. """
     try:
         tree = ET.parse(file_path)
         root = tree.getroot()
 
-        # ✅ Handle XLIFF versions
-        ns = {"xliff": "urn:oasis:names:tc:xliff:document:1.2"}  # XLIFF 1.2 namespace
         segments = []
 
         for trans_unit in root.findall(".//xliff:trans-unit", ns):
@@ -43,10 +44,7 @@ def check_segment(source, target):
     if has_mismatched_tags(source, target):
         return gettext_gettext("Mismatch/missing tag")
     
-    if target.startswith("#") and target.endswith("$"):
-        return gettext_gettext("Pseudotranslated")
-
-    if target.startswith("_") and target.endswith("_"):
+    if is_pseudotranslated(target):
         return gettext_gettext("Pseudotranslated")
 
     return gettext_gettext("Correct")
@@ -54,8 +52,9 @@ def check_segment(source, target):
 def has_mismatched_tags(source, target):
     """ ✅ Checks if tags are mismatched/missing or out of order. """
     # Use regular expression to extract tags and text content
-    source_tags = re.findall(r'<[^>]+>', source)
-    target_tags = re.findall(r'<[^>]+>', target)
+    # ✅ Use sets instead of lists for faster comparison
+    return set(re.findall(r'<[^>]+>', source)) != set(re.findall(r'<[^>]+>', target))
 
-    # Check if the tags are the same in order and position
-    return source_tags != target_tags
+def is_pseudotranslated(target):
+    """ ✅ Checks if target text follows pseudotranslation patterns. """
+    return (target.startswith("#") and target.endswith("$")) or (target.startswith("_") and target.endswith("_"))
