@@ -17,10 +17,13 @@ CREATE TABLE validation_reports (
     target_text TEXT NOT NULL,          -- Translated text
     qa_status VARCHAR(255) NOT NULL,    -- QA validation status (e.g., "Correct", "Mismatch/missing tag")
 
-    -- We create a composite unique index for file_name, date_validated, and segment_id 
+    -- Composite unique index for file_name, date_validated, and segment_id 
     UNIQUE INDEX unique_report (file_name, date_validated, segment_id), -- Ensures each segment has a unique validation entry per file/date
     
     INDEX idx_file_name (file_name),  -- Speeds up lookups by file name
     INDEX idx_date (date_validated),  -- Fast retrieval of reports by date
     INDEX idx_segment_id (segment_id) -- Efficient filtering by segment ID
 );
+
+-- Function to clear the table and reset auto-increment before inserting new data
+TRUNCATE TABLE validation_reports;
