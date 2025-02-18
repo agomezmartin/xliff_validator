@@ -1,8 +1,9 @@
 ﻿from PySide6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QLabel, QTableWidget, QTableWidgetItem, QHeaderView, QFileDialog
 from PySide6.QtGui import QColor
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QDate
 from src.logic.qa_checker import parse_xliff
 from src.logic.excel_exporter import export_to_excel
+from src.logic.database_exporter import export_to_database  # ✅ Import the database exporter
 from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
 class ValidatorScreen(QWidget):
@@ -10,6 +11,8 @@ class ValidatorScreen(QWidget):
         super().__init__()
         self.main_window = main_window
         self.results = []
+        self.file_name = ""  # To store the file name
+
 
         self.init_ui()
 
@@ -32,11 +35,17 @@ class ValidatorScreen(QWidget):
         self.table = QTableWidget()
         layout.addWidget(self.table)
 
-        # ✅ Export Button
-        self.export_button = QPushButton(gettext_gettext("Export to Excel"))
-        self.export_button.setStyleSheet("padding: 8px; font-size: 14px;")
-        self.export_button.clicked.connect(self.export_results)
-        layout.addWidget(self.export_button)
+        # ✅ Export to Excel Button
+        self.export_excel_button = QPushButton(gettext_gettext("Export to Excel"))
+        self.export_excel_button.setStyleSheet("padding: 8px; font-size: 14px;")
+        self.export_excel_button.clicked.connect(self.export_to_excel_results)
+        layout.addWidget(self.export_excel_button)
+
+        # ✅ Export to Database Button
+        self.export_db_button = QPushButton(gettext_gettext("Export to Database"))
+        self.export_db_button.setStyleSheet("padding: 8px; font-size: 14px;")
+        self.export_db_button.clicked.connect(self.export_to_database_results)
+        layout.addWidget(self.export_db_button)
 
         # ✅ Back to Home Button
         self.back_home_btn = QPushButton(gettext_gettext("Back to Home"))
@@ -55,6 +64,7 @@ class ValidatorScreen(QWidget):
         # ✅ Open file dialog and get selected file
         file_path, _ = file_dialog.getOpenFileName(self, gettext_gettext("Open XLIFF File"))
         if file_path:
+            self.file_name = file_path.split("/")[-1]  # Extract the file name from the file path
             self.handle_file_validation(file_path)  # Trigger validation for the selected file
         else:
             print(gettext_gettext("No file selected."))
@@ -86,9 +96,9 @@ class ValidatorScreen(QWidget):
             self.table.setItem(row, 3, QTableWidgetItem(qa_status))
 
         # ✅ Set QA status with color coding
-            status_item = QTableWidgetItem(qa_status)
-            status_item.setForeground(self.get_status_color(qa_status))
-            self.table.setItem(row, 3, status_item)
+        for row in range(self.table.rowCount()):
+            status_item = self.table.item(row, 3)
+            status_item.setForeground(self.get_status_color(status_item.text()))
 
     def get_status_color(self, status):
             """ ✅ Returns color for QA status (colored text). """
@@ -106,9 +116,19 @@ class ValidatorScreen(QWidget):
                 return QColor(0, 0, 255)  # 🔵 Blue for Pseudotranslated
             return QColor(0, 0, 0)  # Default: Black text color for other statuses
 
-    def export_results(self):
+    def export_to_excel_results(self):
         """ ✅ Calls the export function to save results to Excel. """
         if self.results:
             export_to_excel(self.results, self)
         else:
             print(gettext_gettext("No validation results to export."))
+
+    def export_to_database_results(self):
+        """ ✅ Calls the export function to save results to MySQL database. """
+        if self.results:
+            file_name = "example_file.xliff"  # Example file name, should be dynamic or passed from handle_file_selection
+            date = QDate.currentDate().toString("yyyy-MM-dd")  # Current date
+            export_to_database(self.results, self.file_name, date)  # Pass file name and date to the exporter
+        else:
+            print(gettext_gettext("No validation results to export."))
+
