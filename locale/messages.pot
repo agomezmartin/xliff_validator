@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-13 14:30+0100\n"
+"POT-Creation-Date: 2025-02-18 13:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,84 +64,110 @@ msgstr ""
 msgid "Exit"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:21
-#: C:\xliff_validator\src\gui\validator_screen.py:56
+#: C:\xliff_validator\src\gui\validator_screen.py:25
+#: C:\xliff_validator\src\gui\validator_screen.py:66
 msgid "Open XLIFF File"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:27
+#: C:\xliff_validator\src\gui\validator_screen.py:31
 msgid "XLIFF Validation Report"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:36
+#: C:\xliff_validator\src\gui\validator_screen.py:40
 msgid "Export to Excel"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:42
-msgid "Back to Home"
+#: C:\xliff_validator\src\gui\validator_screen.py:46
+msgid "Export to Database"
 msgstr ""
 
 #: C:\xliff_validator\src\gui\validator_screen.py:52
+msgid "Back to Home"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:62
 msgid "XLIFF Files (*.xliff *.xml)"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:60
+#: C:\xliff_validator\src\gui\validator_screen.py:71
 msgid "No file selected."
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:73
+#: C:\xliff_validator\src\gui\validator_screen.py:84
 #: C:\xliff_validator\src\logic\excel_exporter.py:29
 msgid "Segment ID"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:74
+#: C:\xliff_validator\src\gui\validator_screen.py:85
 #: C:\xliff_validator\src\logic\excel_exporter.py:30
 msgid "Source"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:75
+#: C:\xliff_validator\src\gui\validator_screen.py:86
 #: C:\xliff_validator\src\logic\excel_exporter.py:31
 msgid "Target"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:76
+#: C:\xliff_validator\src\gui\validator_screen.py:87
 #: C:\xliff_validator\src\logic\excel_exporter.py:32
 msgid "QA Status"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:95
-#: C:\xliff_validator\src\logic\qa_checker.py:52
+#: C:\xliff_validator\src\gui\validator_screen.py:106
+#: C:\xliff_validator\src\logic\qa_checker.py:50
 msgid "Correct"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:97
-#: C:\xliff_validator\src\logic\qa_checker.py:35
+#: C:\xliff_validator\src\gui\validator_screen.py:108
+#: C:\xliff_validator\src\logic\qa_checker.py:36
 msgid "Untranslated segment"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:99
-#: C:\xliff_validator\src\logic\qa_checker.py:41
+#: C:\xliff_validator\src\gui\validator_screen.py:110
+#: C:\xliff_validator\src\logic\qa_checker.py:42
 msgid "Source in target"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:101
-#: C:\xliff_validator\src\logic\qa_checker.py:38
+#: C:\xliff_validator\src\gui\validator_screen.py:112
+#: C:\xliff_validator\src\logic\qa_checker.py:39
 msgid "Source missing"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:103
-#: C:\xliff_validator\src\logic\qa_checker.py:44
+#: C:\xliff_validator\src\gui\validator_screen.py:114
+#: C:\xliff_validator\src\logic\qa_checker.py:45
 msgid "Mismatch/missing tag"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:105
-#: C:\xliff_validator\src\logic\qa_checker.py:47
-#: C:\xliff_validator\src\logic\qa_checker.py:50
+#: C:\xliff_validator\src\gui\validator_screen.py:116
+#: C:\xliff_validator\src\logic\qa_checker.py:48
 msgid "Pseudotranslated"
 msgstr ""
 
-#: C:\xliff_validator\src\gui\validator_screen.py:114
+#: C:\xliff_validator\src\gui\validator_screen.py:125
+#: C:\xliff_validator\src\gui\validator_screen.py:140
 msgid "No validation results to export."
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:135
+#: C:\xliff_validator\src\gui\validator_screen.py:137
+msgid "Database confirmation"
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:135
+#: C:\xliff_validator\src\gui\validator_screen.py:148
+msgid "The QA Report has been added successfully."
+msgstr ""
+
+#: C:\xliff_validator\src\gui\validator_screen.py:137
+msgid "Error: The report has not been added."
+msgstr ""
+
+#: C:\xliff_validator\src\logic\database_exporter.py:37
+msgid "Validation results exported to database successfully."
+msgstr ""
+
+#: C:\xliff_validator\src\logic\database_exporter.py:40
+msgid "Error: {e}"
 msgstr ""
 
 #: C:\xliff_validator\src\logic\excel_exporter.py:12
@@ -160,10 +186,10 @@ msgstr ""
 msgid "Excel export completed successfully!"
 msgstr ""
 
-#: C:\xliff_validator\src\logic\qa_checker.py:28
+#: C:\xliff_validator\src\logic\qa_checker.py:29
 msgid "Error: The XLIFF file is corrupted or unreadable."
 msgstr ""
 
-#: C:\xliff_validator\src\logic\qa_checker.py:30
+#: C:\xliff_validator\src\logic\qa_checker.py:31
 msgid "Error: "
 msgstr ""
