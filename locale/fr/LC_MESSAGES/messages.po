@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-13 13:04+0100\n"
+"POT-Creation-Date: 2025-02-18 13:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,85 +64,114 @@ msgstr "_Constatant ouverte revêt_"
 msgid "Exit"
 msgstr "_OPCVM_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:21
-#: C:\xliff_validator\src\gui\validator_screen.py:56
+#: C:\xliff_validator\src\gui\validator_screen.py:25
+#: C:\xliff_validator\src\gui\validator_screen.py:66
 msgid "Open XLIFF File"
 msgstr "_Mol/l évalués cidre_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:27
+#: C:\xliff_validator\src\gui\validator_screen.py:31
 msgid "XLIFF Validation Report"
 msgstr "_Projets indépendantes résulter_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:36
+#: C:\xliff_validator\src\gui\validator_screen.py:40
 msgid "Export to Excel"
 msgstr "_Slovénie bis enlevée_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:42
+#: C:\xliff_validator\src\gui\validator_screen.py:46
+#, fuzzy
+msgid "Export to Database"
+msgstr "_Slovénie bis enlevée_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:52
 msgid "Back to Home"
 msgstr "_GARNI OIL seuls_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:52
+#: C:\xliff_validator\src\gui\validator_screen.py:62
 msgid "XLIFF Files (*.xliff *.xml)"
 msgstr "_Traitée établie (*.xliff *.xml)_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:60
+#: C:\xliff_validator\src\gui\validator_screen.py:71
 msgid "No file selected."
 msgstr "_Nºs avril EVENTUELLE._"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:73
+#: C:\xliff_validator\src\gui\validator_screen.py:84
 #: C:\xliff_validator\src\logic\excel_exporter.py:29
 msgid "Segment ID"
 msgstr "_Important foi_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:74
+#: C:\xliff_validator\src\gui\validator_screen.py:85
 #: C:\xliff_validator\src\logic\excel_exporter.py:30
 msgid "Source"
 msgstr "_Produire_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:75
+#: C:\xliff_validator\src\gui\validator_screen.py:86
 #: C:\xliff_validator\src\logic\excel_exporter.py:31
 msgid "Target"
 msgstr "_Laminage_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:76
+#: C:\xliff_validator\src\gui\validator_screen.py:87
 #: C:\xliff_validator\src\logic\excel_exporter.py:32
 msgid "QA Status"
 msgstr "_MM. conserve_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:95
-#: C:\xliff_validator\src\logic\qa_checker.py:52
+#: C:\xliff_validator\src\gui\validator_screen.py:106
+#: C:\xliff_validator\src\logic\qa_checker.py:50
 msgid "Correct"
 msgstr "_AUTORISES_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:97
-#: C:\xliff_validator\src\logic\qa_checker.py:35
+#: C:\xliff_validator\src\gui\validator_screen.py:108
+#: C:\xliff_validator\src\logic\qa_checker.py:36
 msgid "Untranslated segment"
 msgstr "_Perpendiculaires réduisant_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:99
-#: C:\xliff_validator\src\logic\qa_checker.py:41
+#: C:\xliff_validator\src\gui\validator_screen.py:110
+#: C:\xliff_validator\src\logic\qa_checker.py:42
 msgid "Source in target"
 msgstr "_Fournies nom classeur_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:101
-#: C:\xliff_validator\src\logic\qa_checker.py:38
+#: C:\xliff_validator\src\gui\validator_screen.py:112
+#: C:\xliff_validator\src\logic\qa_checker.py:39
 msgid "Source missing"
 msgstr "_Pratique trifolium_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:103
-#: C:\xliff_validator\src\logic\qa_checker.py:44
+#: C:\xliff_validator\src\gui\validator_screen.py:114
+#: C:\xliff_validator\src\logic\qa_checker.py:45
 msgid "Mismatch/missing tag"
 msgstr "_Inhibition/maquettes Iris_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:105
-#: C:\xliff_validator\src\logic\qa_checker.py:47
-#: C:\xliff_validator\src\logic\qa_checker.py:50
+#: C:\xliff_validator\src\gui\validator_screen.py:116
+#: C:\xliff_validator\src\logic\qa_checker.py:48
 msgid "Pseudotranslated"
 msgstr "_Non-commercialisation_"
 
-#: C:\xliff_validator\src\gui\validator_screen.py:114
+#: C:\xliff_validator\src\gui\validator_screen.py:125
+#: C:\xliff_validator\src\gui\validator_screen.py:140
 msgid "No validation results to export."
 msgstr "_Que précipitation employées Gin Nacional._"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:135
+#: C:\xliff_validator\src\gui\validator_screen.py:137
+msgid "Database confirmation"
+msgstr "_Oui-commercialisation_del_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:135
+#: C:\xliff_validator\src\gui\validator_screen.py:148
+#, fuzzy
+msgid "The QA Report has been added successfully."
+msgstr "_Fournir mélangés gouvernement particulièrement!_"
+
+#: C:\xliff_validator\src\gui\validator_screen.py:137
+msgid "Error: The report has not been added."
+msgstr "_Occupée: element particulièrement!_"
+
+#: C:\xliff_validator\src\logic\database_exporter.py:37
+msgid "Validation results exported to database successfully."
+msgstr "_Que précipitation emuvernement particulièrement!_"
+
+#: C:\xliff_validator\src\logic\database_exporter.py:40
+#, fuzzy
+msgid "Error: {e}"
+msgstr "_Occupée:_ "
 
 #: C:\xliff_validator\src\logic\excel_exporter.py:12
 msgid "Save Excel File"
@@ -160,10 +189,10 @@ msgstr "_Découpées BELGIQUE_"
 msgid "Excel export completed successfully!"
 msgstr "_Fournir mélangés gouvernement particulièrement!_"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:28
+#: C:\xliff_validator\src\logic\qa_checker.py:29
 msgid "Error: The XLIFF file is corrupted or unreadable."
 msgstr "_Méthyle:_ _Donc anchois unies Pas dessiccateur etc DEMONSTRATION._"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:30
+#: C:\xliff_validator\src\logic\qa_checker.py:31
 msgid "Error: "
 msgstr "_Occupée:_ "
