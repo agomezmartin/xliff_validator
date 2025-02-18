@@ -40,12 +40,14 @@ class ValidatorScreen(QWidget):
         self.export_excel_button = QPushButton(gettext_gettext("Export to Excel"))
         self.export_excel_button.setStyleSheet("padding: 8px; font-size: 14px;")
         self.export_excel_button.clicked.connect(self.export_to_excel_results)
+        self.export_excel_button.setVisible(False)  # Hide 'Export to Excel' button initially
         layout.addWidget(self.export_excel_button)
 
         # ✅ Export to Database Button
         self.export_db_button = QPushButton(gettext_gettext("Export to Database"))
         self.export_db_button.setStyleSheet("padding: 8px; font-size: 14px;")
         self.export_db_button.clicked.connect(self.export_to_database_results)
+        self.export_db_button.setVisible(False)  # Hide 'Export to Database' button initially
         layout.addWidget(self.export_db_button)
 
         # ✅ Back to Home Button
@@ -100,6 +102,11 @@ class ValidatorScreen(QWidget):
         for row in range(self.table.rowCount()):
             status_item = self.table.item(row, 3)
             status_item.setForeground(self.get_status_color(status_item.text()))
+
+        # ✅ Show export buttons after results are displayed
+        if results:
+            self.export_excel_button.setVisible(True)
+            self.export_db_button.setVisible(True)
 
     def get_status_color(self, status):
             """ ✅ Returns color for QA status (colored text). """
