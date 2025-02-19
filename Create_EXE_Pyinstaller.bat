@@ -15,7 +15,7 @@ REM pyinstaller --onefile --noconsole --add-data "c:\xliff_validator\src\resourc
 REM --add-data "locale;local": this parameter imports l10n files into the executable
 REM pyinstaller XLIFF_validator.spec --noconfirm
 REM pyinstaller --add-data "locale;locale" --noconsole --icon=c:\xliff_validator\src\resources\executable.ico XLIFF_validator.py
-pyinstaller --add-data "locale;locale" --onefile --noconsole --icon=c:\xliff_validator\src\resources\executable.ico XLIFF_validator.py
+pyinstaller --add-data "locale;locale" --onefile --hidden-import=mysql.connector --noconsole --icon=c:\xliff_validator\src\resources\executable.ico XLIFF_validator.py
 
 
 echo Build complete!
