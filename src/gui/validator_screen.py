@@ -139,27 +139,26 @@ class ValidatorScreen(QWidget):
             date = current_datetime.toString("yyyy-MM-dd HH:mm") # ✅ Format the current datetime as 'yyyy-MM-dd HH:mm'
 
             if export_to_database(self.results, self.file_name, date): # Pass file name and date to the exporter
-                show_database_confirmation(gettext_gettext("Database confirmation"),gettext_gettext("The QA Report has been added successfully."))
+                self.show_database_confirmation_message(
+                    gettext_gettext("Database confirmation"), # Title
+                    gettext_gettext("The QA Report has been added successfully.") # Message
+                    )
             else:
-              show_database_confirmation(gettext_gettext("Database confirmation"),gettext_gettext("Error: The report has not been added."))
+              self.show_database_confirmation_message(
+                  gettext_gettext("Database confirmation"), # Title
+                  gettext_gettext("Error: The report has not been added.") # Message
+                  )
 
         else:
             print(gettext_gettext("No validation results to export."))
 
-def show_database_confirmation(title, message):
-    """
-    Displays an confirmation message box with the given title and message.
-    """
-    msg_box = QMessageBox()
-
-    if message==gettext_gettext("The QA Report has been added successfully."):
-        msg_box.setIcon(QMessageBox.Information)
-        msg_box.setWindowTitle(title)
-        msg_box.setText(message)
-        msg_box.exec()
-
-    else:
-        msg_box.setIcon(QMessageBox.Critical)
-        msg_box.setWindowTitle(title)
-        msg_box.setText(message)
-        msg_box.exec()
+    def show_database_confirmation_message(self, title, message):
+            """ ✅ Displays a confirmation message box with the given title and message. """
+            msg_box = QMessageBox(self)
+            if message == gettext_gettext("The QA Report has been added successfully."):
+                msg_box.setIcon(QMessageBox.Information)
+            else:
+                msg_box.setIcon(QMessageBox.Critical)
+            msg_box.setWindowTitle(title)
+            msg_box.setText(message)
+            msg_box.exec()
