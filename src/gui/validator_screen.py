@@ -127,7 +127,15 @@ class ValidatorScreen(QWidget):
     def export_to_excel_results(self):
         """ ✅ Calls the export function to save results to Excel. """
         if self.results:
-            export_to_excel(self.results, self)
+            excel_confirmation, excel_message = export_to_excel(self.results, self)
+
+            if excel_confirmation:
+                self.show_confirmation_message(gettext_gettext("Excel confirmation"), excel_message)
+            else:
+                self.show_confirmation_message(
+                    gettext_gettext("Excel confirmation"), # Title
+                    excel_message) # Message
+
         else:
             print(gettext_gettext("No validation results to export."))
 
@@ -138,24 +146,26 @@ class ValidatorScreen(QWidget):
             current_datetime = QDateTime.currentDateTime() # ✅ Get the current date and time
             date = current_datetime.toString("yyyy-MM-dd HH:mm") # ✅ Format the current datetime as 'yyyy-MM-dd HH:mm'
 
-            if export_to_database(self.results, self.file_name, date): # Pass file name and date to the exporter
-                self.show_database_confirmation_message(
+            database_confirmation, database_message = export_to_database(self.results, self.file_name, date) # Pass file name and date to the exporter
+            
+            if database_confirmation:
+                self.show_confirmation_message(
                     gettext_gettext("Database confirmation"), # Title
-                    gettext_gettext("The QA Report has been added successfully.") # Message
+                    database_message # Message
                     )
             else:
-              self.show_database_confirmation_message(
+              self.show_confirmation_message(
                   gettext_gettext("Database confirmation"), # Title
-                  gettext_gettext("Error: The report has not been added.") # Message
+                  database_message # Message
                   )
 
         else:
             print(gettext_gettext("No validation results to export."))
 
-    def show_database_confirmation_message(self, title, message):
+    def show_confirmation_message(self, title, message):
             """ ✅ Displays a confirmation message box with the given title and message. """
             msg_box = QMessageBox(self)
-            if message == gettext_gettext("The QA Report has been added successfully."):
+            if message == gettext_gettext("Validation results exported to database successfully.") or message == gettext_gettext("Excel export completed successfully!"):
                 msg_box.setIcon(QMessageBox.Information)
             else:
                 msg_box.setIcon(QMessageBox.Critical)
