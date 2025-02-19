@@ -4,6 +4,8 @@ from src.utils.i18n import gettext_gettext  # ✅ Import translation
 def export_to_database(results, file_name, date_validated):
     """ ✅ Exports validation results to MySQL database. """
     try:
+        message = "" # message
+
         # ✅ Establish a connection to the MySQL database
         conn = mysql.connector.connect(
             host="127.0.0.1",        # Your MySQL host
@@ -32,10 +34,13 @@ def export_to_database(results, file_name, date_validated):
         cursor.close()
         conn.close()
 
-        return True
-
         print(gettext_gettext("Validation results exported to database successfully."))
+        message = gettext_gettext("Validation results exported to database successfully.")
+        
+        return True, message
 
     except mysql.connector.Error as e:
         print(gettext_gettext(f"Error: {e}"))
-        return False
+        message = gettext_gettext(f"Error: {e}")
+        
+        return False, message
