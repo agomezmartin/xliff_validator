@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="plaintext" original="messages" source-language="en" target-language="de-de">
+    <body>
+      <trans-unit id="quiz/sport/q1/question">
+        <source>Which one is correct team name in NBA?</source><target>Which one is correct team name in NBA?</target>
+      </trans-unit>
+      <trans-unit id="quiz/sport/q1/options[0]">
+        <source>New York Bulls</source><target>New York Bulls</target>
+      </trans-unit>
+      <trans-unit id="quiz/sport/q1/options[1]">
+        <source>Los Angeles Kings</source><target>Los Ángeles Kings</target>
+      </trans-unit>
+      <trans-unit id="quiz/sport/q1/options[2]">
+        <source>Golden State Warriros</source><target>_Ğöļ♫♩♩ Ŝŧåŧ♩ Ŵåȑȑįȑöş_</target>
+      </trans-unit>
+      <trans-unit id="quiz/sport/q1/options[3]">
+        <source>Huston Rocket</source><target>#♬ȕşŧö♩ Řöçķ♩ŧ$</target>
+      </trans-unit>
+      <trans-unit id="quiz/sport/q1/answer">
+        <source>Huston Rocket</source><target>#♬ȕşŧö♩ Řöçķ♩ŧ$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/question">
+        <source>5 + 7 = ?</source><target>#5 + 7 = ?$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/options[0]">
+        <source>10</source><target>#10$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/options[1]">
+        <source>11</source><target>#11$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/options[2]">
+        <source>12</source><target>#12$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/options[3]">
+        <source>13</source><target>#13$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/answer">
+        <source>12</source><target>#12$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/question">
+        <source>12 - 8 = ?</source><target>#12 - 8 = ?$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/options[0]">
+        <source>1</source><target>#1$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/options[1]">
+        <source>2</source><target>#2$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/options[2]">
+        <source>3</source><target>#3$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/options[3]">
+        <source>4</source><target>#4$</target>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/answer">
+        <source>4</source><target>#4$</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
