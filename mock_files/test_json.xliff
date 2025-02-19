@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="plaintext" original="messages" source-language="en">
+    <body>
+      <trans-unit id="quiz/sport/q1/question">
+        <source>Which one is correct team name in NBA?</source>
+      </trans-unit>
+      <trans-unit id="quiz/sport/q1/options[0]">
+        <source>New York Bulls</source>
+      </trans-unit>
+      <trans-unit id="quiz/sport/q1/options[1]">
+        <source>Los Angeles Kings</source>
+      </trans-unit>
+      <trans-unit id="quiz/sport/q1/options[2]">
+        <source>Golden State Warriros</source>
+      </trans-unit>
+      <trans-unit id="quiz/sport/q1/options[3]">
+        <source>Huston Rocket</source>
+      </trans-unit>
+      <trans-unit id="quiz/sport/q1/answer">
+        <source>Huston Rocket</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/question">
+        <source>5 + 7 = ?</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/options[0]">
+        <source>10</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/options[1]">
+        <source>11</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/options[2]">
+        <source>12</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/options[3]">
+        <source>13</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q1/answer">
+        <source>12</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/question">
+        <source>12 - 8 = ?</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/options[0]">
+        <source>1</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/options[1]">
+        <source>2</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/options[2]">
+        <source>3</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/options[3]">
+        <source>4</source>
+      </trans-unit>
+      <trans-unit id="quiz/maths/q2/answer">
+        <source>4</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
