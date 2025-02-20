@@ -225,9 +225,8 @@ msgid "â Unexpected Error: {e}"
 msgstr "â Error inesperado: {e}"
 
 #: C:\xliff_validator\src\logic\qa_checker.py:27
-#, fuzzy
 msgid "Segments extracted and validated successfully."
-msgstr "Los resultados se han guardado en base de datos correctamente."
+msgstr "Los resultados se han extraído y validado correctamente."
 
 #: C:\xliff_validator\src\logic\qa_checker.py:32
 #: C:\xliff_validator\src\logic\qa_checker.py:33
