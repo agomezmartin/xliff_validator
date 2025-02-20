@@ -1,6 +1,14 @@
-﻿import mysql.connector
-from src.utils.i18n import gettext_gettext  # ✅ Import translation
+﻿from src.utils.i18n import gettext_gettext  # ✅ Import translation
+from src.utils.logs_config import logging
 
+# Ensure MySQL modules are found
+try:
+    import mysql.connector
+    # import MySQLdb
+
+except ImportError as e:
+    print(gettext_gettext(f"MySQL import error: {e}"))
+    
 def export_to_database(results, file_name, date_validated):
     """ ✅ Exports validation results to MySQL database. """
     try:
@@ -35,12 +43,24 @@ def export_to_database(results, file_name, date_validated):
         conn.close()
 
         print(gettext_gettext("Validation results exported to database successfully."))
+        logging.info(gettext_gettext("Validation results exported to database successfully."))
+
         message = gettext_gettext("Validation results exported to database successfully.")
-        
+
         return True, message
 
     except mysql.connector.Error as e:
-        print(gettext_gettext(f"Error: {e}"))
-        message = gettext_gettext(f"Error: {e}")
+        print(gettext_gettext(f"Connector error: {e}"))
+        logging.error(gettext_gettext(f"Connector error: {e}"))
         
+        message = gettext_gettext(f"Connector error: {e}")
+
+        return False, message
+
+    except Exception as e:
+        print(gettext_gettext(f"Generic error in database exporter file: {e}"))
+        logging.error(gettext_gettext(f"Generic error in database exporter file: {e}"))
+
+        message = gettext_gettext(f"Generic error in database exporter file: {e}")
+
         return False, message
