@@ -82,5 +82,5 @@ xliff_validator/
 ```
 
 ## License
-This project is licensed under [MIT License](LICENSE).
+This project is licensed under [MIT License](LICENSE.txt).
 
