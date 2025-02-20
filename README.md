@@ -67,6 +67,7 @@ xliff_validator/
 │   ├── utils/
 │   │   ├── i18n.py           (Handles internationalization, imports `localedir` from `compiler.py`)
 │   │   ├── compiler.py       (Determines the correct locale directory for translations)
+│── logs/		      (Logs user activity and errors)
 │── XLIFF_validator.py        (Entry point of the application)
 ```
 ## Compilation folder structure
