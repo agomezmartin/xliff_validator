@@ -1,5 +1,6 @@
 ﻿import pandas as pd
 from PySide6.QtWidgets import QFileDialog
+from src.utils.logs_config import logging
 from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
 def export_to_excel(validation_results, parent_window):
@@ -53,25 +54,36 @@ def export_to_excel(validation_results, parent_window):
             # Freeze first row (headers)
             worksheet.freeze_panes(1, 0)
             message = gettext_gettext("Excel export completed successfully!")
+            logging.info(gettext_gettext("Excel export completed successfully!"))
             
             return True, message
     
     except FileNotFoundError:
         message = gettext_gettext("❌ Error: File path not found.")
+        logging.error(gettext_gettext("❌ Error: File path not found."))
+
         return False, message
 
     except PermissionError:
         message = gettext_gettext("❌ Error: File is open. Please close it and try again.")
+        logging.error(gettext_gettext("❌ Error: File is open. Please close it and try again."))
+
         return False, message
 
     except ValueError as ve:
         message = gettext_gettext(f"❌ Value Error: {ve}")
+        logging.error(gettext_gettext(f"❌ Value Error: {ve}"))
+
         return False, message
 
     except IOError:
         message = gettext_gettext("❌ IOError: Problem writing to file.")
+        logging.error(gettext_gettext("❌ IOError: Problem writing to file."))
+
         return False, message
 
     except Exception as e:
         message = gettext_gettext(f"❌ Unexpected Error: {e}")
+        logging.error(gettext_gettext(f"❌ Unexpected Error: {e}"))
+
         return False, message
