@@ -106,7 +106,7 @@ class ValidatorScreen(QWidget):
         # ✅ Show export buttons after results are displayed
         if results:
             self.export_excel_button.setVisible(True)
-            self.export_db_button.setVisible(True)
+            self.export_db_button.setVisible(False) # Set it to True to re-activate DB export
 
     def get_status_color(self, status):
             """ ✅ Returns color for QA status (colored text). """
