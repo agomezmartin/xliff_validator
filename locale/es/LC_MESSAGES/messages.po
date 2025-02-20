@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-19 13:44+0100\n"
+"POT-Creation-Date: 2025-02-20 13:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,52 +94,52 @@ msgid "No file selected."
 msgstr "No se ha seleccionado ningún archivo."
 
 #: C:\xliff_validator\src\gui\validator_screen.py:86
-#: C:\xliff_validator\src\logic\excel_exporter.py:31
+#: C:\xliff_validator\src\logic\excel_exporter.py:32
 msgid "Segment ID"
 msgstr "ID del segmento"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:87
-#: C:\xliff_validator\src\logic\excel_exporter.py:32
+#: C:\xliff_validator\src\logic\excel_exporter.py:33
 msgid "Source"
 msgstr "Original"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:88
-#: C:\xliff_validator\src\logic\excel_exporter.py:33
+#: C:\xliff_validator\src\logic\excel_exporter.py:34
 msgid "Target"
 msgstr "Traducción"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:89
-#: C:\xliff_validator\src\logic\excel_exporter.py:34
+#: C:\xliff_validator\src\logic\excel_exporter.py:35
 msgid "QA Status"
 msgstr "Resultado"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:113
-#: C:\xliff_validator\src\logic\qa_checker.py:50
+#: C:\xliff_validator\src\logic\qa_checker.py:57
 msgid "Correct"
 msgstr "Correcto"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:115
-#: C:\xliff_validator\src\logic\qa_checker.py:36
+#: C:\xliff_validator\src\logic\qa_checker.py:43
 msgid "Untranslated segment"
 msgstr "Segmento sin traducir"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:117
-#: C:\xliff_validator\src\logic\qa_checker.py:42
+#: C:\xliff_validator\src\logic\qa_checker.py:49
 msgid "Source in target"
 msgstr "Original en traducción"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:119
-#: C:\xliff_validator\src\logic\qa_checker.py:39
+#: C:\xliff_validator\src\logic\qa_checker.py:46
 msgid "Source missing"
 msgstr "Original vacío"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:121
-#: C:\xliff_validator\src\logic\qa_checker.py:45
+#: C:\xliff_validator\src\logic\qa_checker.py:52
 msgid "Mismatch/missing tag"
 msgstr "Error en etiquetas internas"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:123
-#: C:\xliff_validator\src\logic\qa_checker.py:48
+#: C:\xliff_validator\src\logic\qa_checker.py:55
 msgid "Pseudotranslated"
 msgstr "Pseudotraducido"
 
@@ -159,64 +159,119 @@ msgid "Database confirmation"
 msgstr "Confirmación de base de datos"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:168
-#: C:\xliff_validator\src\logic\database_exporter.py:37
-#: C:\xliff_validator\src\logic\database_exporter.py:38
+#: C:\xliff_validator\src\logic\database_exporter.py:45
+#: C:\xliff_validator\src\logic\database_exporter.py:46
+#: C:\xliff_validator\src\logic\database_exporter.py:48
 msgid "Validation results exported to database successfully."
-msgstr "Los resultados se han registrado correctamente."
+msgstr "Los resultados se han registrado en base de datos correctamente."
 
 #: C:\xliff_validator\src\gui\validator_screen.py:168
-#: C:\xliff_validator\src\logic\excel_exporter.py:55
+#: C:\xliff_validator\src\logic\excel_exporter.py:56
+#: C:\xliff_validator\src\logic\excel_exporter.py:57
 msgid "Excel export completed successfully!"
 msgstr "Se ha guardado el archivo Excel correctamente."
 
-#: C:\xliff_validator\src\logic\database_exporter.py:43
-#: C:\xliff_validator\src\logic\database_exporter.py:44
+#: C:\xliff_validator\src\logic\database_exporter.py:10
+msgid "MySQL import error: {e}"
+msgstr "Error al importar MySQL: {e}"
+
+#: C:\xliff_validator\src\logic\database_exporter.py:53
+#: C:\xliff_validator\src\logic\database_exporter.py:54
+#: C:\xliff_validator\src\logic\database_exporter.py:56
 #, fuzzy
-msgid "Error: {e}"
+msgid "Connector error: {e}"
 msgstr "Error: {e} "
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:14
+#: C:\xliff_validator\src\logic\database_exporter.py:61
+#: C:\xliff_validator\src\logic\database_exporter.py:62
+#: C:\xliff_validator\src\logic\database_exporter.py:64
+msgid "Generic error in database exporter file: {e}"
+msgstr "Error genérico en el archivo ‘database exporter’: {e}"
+
+#: C:\xliff_validator\src\logic\excel_exporter.py:15
 msgid "Save Excel File"
 msgstr "Guardar archivo Excel"
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:16
+#: C:\xliff_validator\src\logic\excel_exporter.py:17
 msgid "Excel Files (*.xlsx)"
 msgstr "Archivos Excel (*.xlsx)"
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:30
+#: C:\xliff_validator\src\logic\excel_exporter.py:31
 msgid "Segment Number"
 msgstr "Número de segmento"
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:60
+#: C:\xliff_validator\src\logic\excel_exporter.py:62
+#: C:\xliff_validator\src\logic\excel_exporter.py:63
 msgid "â Error: File path not found."
 msgstr "â Error: No se ha encontrado la ruta del archivo."
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:64
+#: C:\xliff_validator\src\logic\excel_exporter.py:68
+#: C:\xliff_validator\src\logic\excel_exporter.py:69
 msgid "â Error: File is open. Please close it and try again."
 msgstr "â Error: El archivo está abierto. Cierre y vuelva a abrir."
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:68
+#: C:\xliff_validator\src\logic\excel_exporter.py:74
+#: C:\xliff_validator\src\logic\excel_exporter.py:75
 msgid "â Value Error: {ve}"
 msgstr "â Error de valorr: {ve}"
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:72
+#: C:\xliff_validator\src\logic\excel_exporter.py:80
+#: C:\xliff_validator\src\logic\excel_exporter.py:81
 msgid "â IOError: Problem writing to file."
 msgstr "â IOError: Error al escribir en el archivo."
 
-#: C:\xliff_validator\src\logic\excel_exporter.py:76
+#: C:\xliff_validator\src\logic\excel_exporter.py:86
+#: C:\xliff_validator\src\logic\excel_exporter.py:87
 msgid "â Unexpected Error: {e}"
 msgstr "â Error inesperado: {e}"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:29
+#: C:\xliff_validator\src\logic\qa_checker.py:27
+#, fuzzy
+msgid "Segments extracted and validated successfully."
+msgstr "Los resultados se han guardado en base de datos correctamente."
+
+#: C:\xliff_validator\src\logic\qa_checker.py:32
+#: C:\xliff_validator\src\logic\qa_checker.py:33
 msgid "Error: The XLIFF file is corrupted or unreadable."
 msgstr "Error: El archivo XLIFF no se puede leer o está corrupto."
 
-#: C:\xliff_validator\src\logic\qa_checker.py:31
+#: C:\xliff_validator\src\logic\qa_checker.py:36
+#: C:\xliff_validator\src\logic\qa_checker.py:37
 msgid "Error: "
 msgstr "Error: "
 
-#~ msgid "The QA Report has been added successfully."
-#~ msgstr "Los resultados se han guardado en base de datos correctamente."
+#: C:\xliff_validator\src\logic\qa_checker.py:60
+#: C:\xliff_validator\src\logic\qa_checker.py:61
+msgid "Error on QA validation rules: {e}"
+msgstr "Error en las reglas de validación: {e}"
+
+#: C:\xliff_validator\src\logic\qa_checker.py:85
+#: C:\xliff_validator\src\logic\qa_checker.py:86
+msgid "Error extracting segment tags: {e}"
+msgstr "Error durante la extracción de las etiquetas de los segmentos: {e}"
+
+#: C:\xliff_validator\src\logic\qa_checker.py:90
+msgid "Mismatched tags checked correctly."
+msgstr "Las etiquetas con problemas se han comprobado correctamente."
+
+#: C:\xliff_validator\src\logic\qa_checker.py:94
+#: C:\xliff_validator\src\logic\qa_checker.py:95
+msgid "Error checking mistmatched tags: {e}"
+msgstr "Error al comprobar los posibles problemas con las etiquetas: {e}"
+
+#: C:\xliff_validator\src\logic\qa_checker.py:103
+#: C:\xliff_validator\src\logic\qa_checker.py:104
+msgid "Error checking pseudotranslated segments: {e}"
+msgstr "Error al comprobar los segmentos pseudotraducidos: {e}"
+
+#: C:\xliff_validator\src\logic\xliff_parser.py:16
+msgid "Segments extracted successfully."
+msgstr "Se ha guardado el archivo Excel correctamente."
+
+#: C:\xliff_validator\src\logic\xliff_parser.py:20
+#: C:\xliff_validator\src\logic\xliff_parser.py:21
+msgid "Error extracting segments: {e}"
+msgstr "Error al extraer los segmentos: {e}"
 
 #~ msgid "Error: The report has not been added."
 #~ msgstr "Error:  Los resultados no se han registrado."
