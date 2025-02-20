@@ -13,6 +13,8 @@ The following information is produced:
 
 Report can be exported to Excel (.xlsx) file.
 
+The application has been internationalized. Currently available in English, Spanish and a French pseudo-translation.
+
 ## i18n Project Structure (internationalization)
 ```
 xliff_validator/
