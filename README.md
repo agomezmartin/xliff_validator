@@ -65,7 +65,7 @@ xliff_validator/
 │   │   ├── qa_checker.py     (Validates XLIFF segments)
 │   │   ├── xliff_parser.py   (Parses XLIFF files and extracts segments)
 │   │   ├── excel_exporter.py (Exports validation results to Excel)
-│   │   ├── database_exporter.py (Sends validation results to Database)
+│   │   ├── database_exporter.py (Sends validation results to Database. Currently deactivated)
 │   ├── utils/
 │   │   ├── i18n.py           (Handles internationalization, imports `localedir` from `compiler.py`)
 │   │   ├── compiler.py       (Determines the correct locale directory for translations)
