@@ -178,9 +178,8 @@ msgstr "Error al importar MySQL: {e}"
 #: C:\xliff_validator\src\logic\database_exporter.py:53
 #: C:\xliff_validator\src\logic\database_exporter.py:54
 #: C:\xliff_validator\src\logic\database_exporter.py:56
-#, fuzzy
 msgid "Connector error: {e}"
-msgstr "Error: {e} "
+msgstr "Error con el conector: {e} "
 
 #: C:\xliff_validator\src\logic\database_exporter.py:61
 #: C:\xliff_validator\src\logic\database_exporter.py:62
