@@ -23,6 +23,7 @@ log_filepath = os.path.join(log_dir, log_filename)
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",  # This removes milliseconds. Comment this line to re-activate miliseconds
     handlers=[
         logging.FileHandler(log_filepath),  # Log to file
         logging.StreamHandler()  # Log to console
@@ -33,6 +34,7 @@ logging.basicConfig(
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",  # This removes milliseconds. Comment this line to re-activate miliseconds
     handlers=[
         logging.FileHandler(log_filepath),  # Log to file
         logging.StreamHandler()  # Log to console
@@ -43,6 +45,7 @@ logging.basicConfig(
 logging.basicConfig(
     level=logging.WARNING,
     format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",  # This removes milliseconds. Comment this line to re-activate miliseconds
     handlers=[
         logging.FileHandler(log_filepath),  # Log to file
         logging.StreamHandler()  # Log to console
@@ -53,6 +56,7 @@ logging.basicConfig(
 logging.basicConfig(
     level=logging.ERROR,
     format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",  # This removes milliseconds. Comment this line to re-activate miliseconds
     handlers=[
         logging.FileHandler(log_filepath),  # Log to file
         logging.StreamHandler()  # Log to console
@@ -63,6 +67,7 @@ logging.basicConfig(
 logging.basicConfig(
     level=logging.CRITICAL,
     format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",  # This removes milliseconds. Comment this line to re-activate miliseconds
     handlers=[
         logging.FileHandler(log_filepath),  # Log to file
         logging.StreamHandler()  # Log to console
