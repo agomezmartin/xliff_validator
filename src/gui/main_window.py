@@ -55,5 +55,10 @@ class MainWindow(QMainWindow):
         """ ✅ Navigates back to the Home Screen. """
         self.central_widget.setCurrentWidget(self.home_screen)
 
+    def closeEvent(self, event):
+        """ ✅ Logs an entry when the user closes the application. """
+        logging.info(gettext_gettext("User closed aplication."))
+        event.accept()  # Ensures the application closes properly
+
     # ✅ Log when the application starts
     logging.info(gettext_gettext("User started application"))
