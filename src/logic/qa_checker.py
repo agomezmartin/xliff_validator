@@ -58,7 +58,7 @@ def check_segment(source, target):
     
     except Exception as e:
         logging.error(gettext_gettext(f"Error on QA validation rules: {e}"))
-        return gettext_gettext(f"Error on QA validation rules: {e}")
+        gettext_gettext(f"Error on QA validation rules: {e}")
 
 def has_mismatched_tags(source, target):
     """Checks if tags are mismatched, missing, out of order, or incorrectly nested."""    

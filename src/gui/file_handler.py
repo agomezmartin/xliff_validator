@@ -1,5 +1,6 @@
 ﻿from PySide6.QtWidgets import QFileDialog, QMessageBox
 import os
+from src.utils.logs_config import logging
 from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
 def select_file():
@@ -21,6 +22,7 @@ def select_file():
     # Validate if the file actually exists
     if not os.path.exists(file_path):
         show_error(gettext_gettext("Error"), gettext_gettext("The selected file does not exist."))
+        logging.error(gettext_gettext("The selected file does not exist."))
         return None
 
     # Validate file extension

@@ -1,8 +1,9 @@
 ﻿from PySide6.QtWidgets import QMainWindow, QMenuBar, QMenu, QStackedWidget
 from PySide6.QtGui import QAction
+from PySide6.QtCore import Qt
 from src.gui.home_screen import HomeScreen
 from src.gui.validator_screen import ValidatorScreen
-from PySide6.QtCore import Qt
+from src.utils.logs_config import logging
 from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
 class MainWindow(QMainWindow):
@@ -53,3 +54,11 @@ class MainWindow(QMainWindow):
     def show_home_screen(self):
         """ ✅ Navigates back to the Home Screen. """
         self.central_widget.setCurrentWidget(self.home_screen)
+
+    def closeEvent(self, event):
+        """ ✅ Logs an entry when the user closes the application. """
+        logging.info(gettext_gettext("User closed aplication."))
+        event.accept()  # Ensures the application closes properly
+
+    # ✅ Log when the application starts
+    logging.info(gettext_gettext("User started application"))
