@@ -1,13 +1,15 @@
-﻿import xml.etree.ElementTree as ET
+﻿from PySide6.QtGui import QColor, QTextCharFormat, QTextCursor
+from PySide6.QtWidgets import QTextEdit
+import xml.etree.ElementTree as ET
 import re
 from src.utils.logs_config import logging
 from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
-# ✅ Define XLIFF namespace (avoids repeated dictionary creation)
+# ✅ Define XLIFF namespace
 ns = {"xliff": "urn:oasis:names:tc:xliff:document:1.2"}  # XLIFF 1.2 namespace
 
-def parse_xliff(file_path):
-    """ ✅ Extracts XLIFF segments for QA validation. """
+def parse_xliff(file_path, text_edit_widget_source, text_edit_widget_target):
+    """ ✅ Extracts XLIFF segments while preserving internal tags & displays them in QTextEdit widgets. """
     try:
         tree = ET.parse(file_path)
         root = tree.getroot()
@@ -16,15 +18,23 @@ def parse_xliff(file_path):
 
         for trans_unit in root.findall(".//xliff:trans-unit", ns):
             segment_id = trans_unit.get("id", "N/A")
-            source_text = trans_unit.find("xliff:source", ns).text or ""
+
+            source_elem = trans_unit.find("xliff:source", ns)
             target_elem = trans_unit.find("xliff:target", ns)
-            target_text = target_elem.text if target_elem is not None else ""
 
-            qa_status = check_segment(source_text, target_text)
+            # ✅ Extract **formatted** text (for GUI) and **plain** text (for QA check)
+            source_text, source_plain = extract_text_with_tags(source_elem)
+            target_text, target_plain = extract_text_with_tags(target_elem) if target_elem is not None else ("", "")
 
-            segments.append((segment_id, source_text, target_text, qa_status))
+            qa_status = check_segment(source_plain, target_plain)
 
-        logging.info(gettext_gettext("Segments extracted and validated successfully."))
+            # ✅ Display colored text in QTextEdit widgets
+            display_colored_text(source_text, text_edit_widget_source)
+            display_colored_text(target_text, text_edit_widget_target)
+
+            segments.append((segment_id, source_plain, target_plain, qa_status))
+
+        logging.info(gettext_gettext("Segments extracted with internal tags successfully."))
 
         return segments
 
@@ -36,69 +46,117 @@ def parse_xliff(file_path):
         logging.error(gettext_gettext("Error: ") + str(e))
         return gettext_gettext("Error: ") + str(e)
 
-def check_segment(source, target):
+
+def extract_text_with_tags(element):
+    """ ✅ Extracts both text and inline tags while highlighting internal tags. """
+    if element is None:
+        return [], ""
+
+    formatted_result = []  # ✅ For GUI display (formatted text)
+    plain_text_result = ""  # ✅ For QA check (plain text)
+
+    blue_format = QTextCharFormat()
+    blue_format.setForeground(QColor("blue"))  # ✅ Set blue color for internal tags
+
+    for node in element.iter():
+        if node.tag == element.tag:  # Skip root node itself
+            if node.text:
+                formatted_result.append((node.text, QTextCharFormat()))  # Normal text
+                plain_text_result += node.text  # Add plain text
+            continue
+
+        tag_str = ET.tostring(node, encoding="unicode", method="xml")
+
+        # ✅ REMOVE namespace (e.g., "ns0:")
+        tag_str = re.sub(r'\s+xmlns(:\w+)?="[^"]+"', '', tag_str)
+        tag_str = re.sub(r'\w+:', '', tag_str)  # Remove any remaining namespace prefixes
+        tag_str = re.sub(r'"(\s?)(/?)>', r'"\2>', tag_str)  # Fix malformed self-closing tags
+
+        # ✅ Build segment with format (for GUI) and without format (for QA)
+        if node.text:
+            formatted_result.append((node.text, QTextCharFormat()))  # Normal text
+            plain_text_result += node.text  # Add plain text
+
+        formatted_result.append((tag_str, blue_format))  # ✅ Internal tag in blue
+        plain_text_result += tag_str  # ✅ Keep tags in plain text for QA
+
+#        if node.tail:
+#            formatted_result.append((node.tail, QTextCharFormat()))  # Normal text after tag
+#            plain_text_result += node.tail  # Add to plain text
+
+    return formatted_result, plain_text_result  # ✅ Returns formatted (for GUI) & plain text (for QA)
+
+
+def check_segment(source_plain, target_plain):
+    """ ✅ QA validation rules. """
     try:
-        """ ✅ QA validation rules. """
-        if not target.strip():
+        if not target_plain.strip():
             return gettext_gettext("Untranslated segment")
-    
-        if not source.strip():
+
+        if not source_plain.strip():
             return gettext_gettext("Source missing")
 
-        if target==source:
+        if target_plain == source_plain:
             return gettext_gettext("Source in target")
 
-        if has_mismatched_tags(source, target):
+        if has_mismatched_tags(source_plain, target_plain):
             return gettext_gettext("Mismatch/missing tag")
-    
-        if is_pseudotranslated(target):
+
+        if has_mismatched_numbers(source_plain, target_plain):
+            return gettext_gettext("Mismatch/missing number")
+
+        if is_pseudotranslated(target_plain):
             return gettext_gettext("Pseudotranslated")
 
         return gettext_gettext("Correct")
-    
+
     except Exception as e:
         logging.error(gettext_gettext(f"Error on QA validation rules: {e}"))
-        gettext_gettext(f"Error on QA validation rules: {e}")
+        return gettext_gettext(f"Error on QA validation rules: {e}")
 
-def has_mismatched_tags(source, target):
-    """Checks if tags are mismatched, missing, out of order, or incorrectly nested."""    
+
+def has_mismatched_tags(source_plain, target_plain):
+    """ ✅ Checks if internal tags are mismatched, missing, or out of order. """
     def extract_tags(segment):
-        try:
-            """Extracts tags and checks for proper nesting using a stack."""
-            tags = re.findall(r'</?[^>]+>', segment)  # Extract all tags using regular expressions
-            stack = []  # Stack to check nesting
-        
-            for tag in tags:
-                if not tag.startswith("</"):  # Opening tag
-                    stack.append(tag)
-                else:  # Closing tag
-                    if not stack:
-                        return False  # Unmatched closing tag
-                
-                    last_tag = stack.pop()
-                    if last_tag[1:] != tag[2:]:  # Compare <tag> with </tag>
-                        return False  # Mismatched tag
-        
-            return not stack  # ✅ If stack is empty, nesting is correct
+        """ ✅ Extracts **all** tags (standard + self-closing) while preserving order. """
+        return re.findall(r'</?[^>]+?>', segment)  # ✅ Extracts **all** tags (opening, closing, self-closing)
 
-        except Exception as e:
-            logging.error(gettext_gettext(f"Error extracting segment tags: {e}"))
-            return gettext_gettext(f"Error extracting segment tags: {e}")
-    
     try:
+        return extract_tags(source_plain) != extract_tags(target_plain)  # ✅ Returns True if mismatches are found
 
-        logging.info(gettext_gettext("Mismatched tags checked correctly."))
-        return extract_tags(source) != extract_tags(target) # ✅ Tags in both source and target segments are checked. Returns TRUE if mismatches are found.
-    
     except Exception as e:
-        logging.error(gettext_gettext(f"Error checking mistmatched tags: {e}"))
-        return gettext_gettext(f"Error checking mistmatched tags: {e}")
+        logging.error(gettext_gettext(f"Error checking mismatched tags: {e}"))
+        return gettext_gettext(f"Error checking mismatched tags: {e}")
 
-def is_pseudotranslated(target):
+def has_mismatched_numbers(source_plain, target_plain):
+    """ ✅ Checks if internal numbers are mismatched, missing, or out of order. """
+    def extract_numbers(segment):
+        """ ✅ Extracts **all** numbers while preserving order. """
+        # return re.findall(r'</?[^>]+?>', segment)  # ✅ Extracts **all** tags (opening, closing, self-closing)
+        return re.findall(r'-?\d+(?:[.,]\d+)?', segment)  # ✅ Extracts **all** numbers
+
     try:
-        """ ✅ Checks if target text follows pseudotranslation patterns. """
-        return (target.startswith("#") and target.endswith("$")) or (target.startswith("_") and target.endswith("_"))
-    
+        return extract_numbers(source_plain) != extract_numbers(target_plain)  # ✅ Returns True if mismatches are found
+
+    except Exception as e:
+        logging.error(gettext_gettext(f"Error checking mismatched numbers: {e}"))
+        return gettext_gettext(f"Error checking mismatched numbers: {e}")
+
+
+def is_pseudotranslated(target_plain):
+    """ ✅ Checks if the target follows pseudotranslation patterns. """
+    try:
+        return (target_plain.startswith("#") and target_plain.endswith("$")) or (target_plain.startswith("_") and target_plain.endswith("_"))
+
     except Exception as e:
         logging.error(gettext_gettext(f"Error checking pseudotranslated segments: {e}"))
         return gettext_gettext(f"Error checking pseudotranslated segments: {e}")
+
+
+def display_colored_text(text_segments, text_edit_widget):
+    """ ✅ Inserts extracted segments with internal tags in blue inside a QTextEdit widget. """
+    text_edit_widget.clear()
+    cursor = text_edit_widget.textCursor()
+
+    for text, format in text_segments:
+        cursor.insertText(text, format)  # ✅ Insert text with correct format
