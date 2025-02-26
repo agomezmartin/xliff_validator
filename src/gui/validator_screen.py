@@ -1,4 +1,4 @@
-﻿from PySide6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QLabel, QTableWidget, QTableWidgetItem, QHeaderView, QFileDialog
+﻿from PySide6.QtWidgets import QTextEdit, QWidget, QVBoxLayout, QPushButton, QLabel, QTableWidget, QTableWidgetItem, QHeaderView, QFileDialog
 from PySide6.QtWidgets import QFileDialog, QMessageBox
 from PySide6.QtGui import QColor
 from PySide6.QtCore import Qt, QDateTime
@@ -74,7 +74,9 @@ class ValidatorScreen(QWidget):
 
     def handle_file_validation(self, file_path):
         """ ✅ Validates the selected XLIFF file and displays the results. """
-        results = parse_xliff(file_path)
+        source_text_edit = QTextEdit()
+        target_text_edit = QTextEdit()
+        results = parse_xliff(file_path, source_text_edit, target_text_edit)
         self.show_results(results)
 
     def show_results(self, results):
@@ -120,6 +122,8 @@ class ValidatorScreen(QWidget):
                 return QColor(255, 0, 0)  # 🔴 Red for Source missing
             elif gettext_gettext("Mismatch/missing tag") in status:
                 return QColor(255, 0, 0)  # 🔴 Red for Mismatch
+            elif gettext_gettext("Mismatch/missing number") in status:
+                return QColor(255, 0, 0)  # 🔴 Red for Numbering
             elif gettext_gettext("Pseudotranslated") in status:
                 return QColor(0, 0, 255)  # 🔵 Blue for Pseudotranslated
             return QColor(0, 0, 0)  # Default: Black text color for other statuses
