@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="es" datatype="plaintext" original="testfile.txt">
+        <body>
+            <trans-unit id="trans-unit-1">
+                <source>Hello, <ph id="1"/>world!</source>
+                <target>Bonjour, <ph id="1"/>monde!</target>
+            </trans-unit>
+            <trans-unit id="trans-unit-2">
+                <source>Click <g id="2">here</g> to continue.</source>
+                <target>Cliquez <g id="2">ici</g> pour continuer.</target>
+            </trans-unit>
+            <trans-unit id="trans-unit-3">
+                <source>The price is <x id="3"/>100 USD.</source>
+                <target>Le prix est de <x id="3"/>100 USD.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
