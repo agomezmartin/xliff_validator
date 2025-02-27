@@ -10,6 +10,7 @@ The following information is produced:
 	1. Correct
 	2. Untranslated Segment
 	3. Mismatch/missing tag
+	4. Mismatch/missing number
 
 Report can be exported to Excel (.xlsx) file.
 
