@@ -64,7 +64,8 @@ xliff_validator/
 │   │   ├── validator_screen.py (Validation results screen)
 │   │   ├── file_handler.py   (Handles file selection)
 │   ├── logic/
-│   │   ├── qa_checker.py     (Parsers and validates XLIFF segments)
+│   │   ├── parse_xliff.py     (Parsers XLIFF segments)
+│   │   ├── qa_checker.py     (Validates XLIFF segments)
 │   │   ├── excel_exporter.py (Exports validation results to Excel)
 │   │   ├── database_exporter.py (Sends validation results to Database. Currently deactivated)
 │   ├── utils/
