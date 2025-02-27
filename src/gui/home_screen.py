@@ -2,7 +2,7 @@
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
 from src.gui.file_handler import select_file
-from src.logic.qa_checker import parse_xliff
+from src.logic.parse_xliff import parse_xliff
 from src.utils.i18n import gettext_gettext  # ✅ Import translation
 
 class HomeScreen(QWidget):
