@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-26 14:08+0100\n"
+"POT-Creation-Date: 2025-02-27 10:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -124,38 +124,38 @@ msgid "QA Status"
 msgstr "_MM. conserve_"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:115
-#: C:\xliff_validator\src\logic\qa_checker.py:111
+#: C:\xliff_validator\src\logic\qa_checker.py:68
 msgid "Correct"
 msgstr "_AUTORISES_"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:117
-#: C:\xliff_validator\src\logic\qa_checker.py:94
+#: C:\xliff_validator\src\logic\qa_checker.py:51
 msgid "Untranslated segment"
 msgstr "_Perpendiculaires réduisant_"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:119
-#: C:\xliff_validator\src\logic\qa_checker.py:100
+#: C:\xliff_validator\src\logic\qa_checker.py:57
 msgid "Source in target"
 msgstr "_Fournies nom classeur_"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:121
-#: C:\xliff_validator\src\logic\qa_checker.py:97
+#: C:\xliff_validator\src\logic\qa_checker.py:54
 msgid "Source missing"
 msgstr "_Pratique trifolium_"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:123
-#: C:\xliff_validator\src\logic\qa_checker.py:103
+#: C:\xliff_validator\src\logic\qa_checker.py:60
 msgid "Mismatch/missing tag"
 msgstr "_Inhibition/maquettes Iris_"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:125
-#: C:\xliff_validator\src\logic\qa_checker.py:106
+#: C:\xliff_validator\src\logic\qa_checker.py:63
 #, fuzzy
 msgid "Mismatch/missing number"
 msgstr "_Inhibition/maquettes Iris_"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:127
-#: C:\xliff_validator\src\logic\qa_checker.py:109
+#: C:\xliff_validator\src\logic\qa_checker.py:66
 msgid "Pseudotranslated"
 msgstr "_Non-commercialisation_"
 
@@ -242,45 +242,45 @@ msgstr "_Nord existants:_ _INFORMEES libanaise The taxon._"
 msgid "â Unexpected Error: {e}"
 msgstr "_sous GRAVIMÉTRIQUE ECHEANT:_ {e}"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:37
+#: C:\xliff_validator\src\logic\parse_xliff.py:38
 #, fuzzy
-msgid "Segments extracted with internal tags successfully."
+msgid "Segments extracted successfully."
 msgstr "_Fournir mélangés gouvernement particulièrement!_"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:42
-#: C:\xliff_validator\src\logic\qa_checker.py:43
+#: C:\xliff_validator\src\logic\parse_xliff.py:43
+#: C:\xliff_validator\src\logic\parse_xliff.py:44
 msgid "Error: The XLIFF file is corrupted or unreadable."
 msgstr "_Méthyle:_ _Donc anchois unies Pas dessiccateur etc DEMONSTRATION._"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:46
-#: C:\xliff_validator\src\logic\qa_checker.py:47
+#: C:\xliff_validator\src\logic\parse_xliff.py:47
+#: C:\xliff_validator\src\logic\parse_xliff.py:48
 msgid "Error: "
 msgstr "_Occupée:_ "
 
-#: C:\xliff_validator\src\logic\qa_checker.py:114
-#: C:\xliff_validator\src\logic\qa_checker.py:115
+#: C:\xliff_validator\src\logic\qa_checker.py:71
+#: C:\xliff_validator\src\logic\qa_checker.py:72
 msgid "Error on QA validation rules: {e}"
 msgstr "_Onéreux CIL SER matérialisées cartons:_ {e}"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:128
-#: C:\xliff_validator\src\logic\qa_checker.py:129
+#: C:\xliff_validator\src\logic\qa_checker.py:84
+#: C:\xliff_validator\src\logic\qa_checker.py:85
 #, fuzzy
 msgid "Error checking mismatched tags: {e}"
 msgstr "_Faculté couramment officiellement émise:_ {e}"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:142
-#: C:\xliff_validator\src\logic\qa_checker.py:143
+#: C:\xliff_validator\src\logic\qa_checker.py:98
+#: C:\xliff_validator\src\logic\qa_checker.py:99
 #, fuzzy
 msgid "Error checking mismatched numbers: {e}"
 msgstr "_Faculté couramment officiellement émise:_ {e}"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:152
-#: C:\xliff_validator\src\logic\qa_checker.py:153
+#: C:\xliff_validator\src\logic\qa_checker.py:107
+#: C:\xliff_validator\src\logic\qa_checker.py:108
 msgid "Error checking pseudotranslated segments: {e}"
 msgstr "_Endroit pertinents non-commercialisation propulsion:_ {e}"
 
 #, fuzzy
-#~ msgid "Segments extracted and validated successfully."
+#~ msgid "Segments extracted with internal tags successfully."
 #~ msgstr "_Fournir mélangés gouvernement particulièrement!_"
 
 #~ msgid "Error extracting segment tags: {e}"

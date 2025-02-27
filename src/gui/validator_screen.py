@@ -2,7 +2,7 @@
 from PySide6.QtWidgets import QFileDialog, QMessageBox
 from PySide6.QtGui import QColor
 from PySide6.QtCore import Qt, QDateTime
-from src.logic.qa_checker import parse_xliff
+from src.logic.parse_xliff import parse_xliff
 from src.logic.excel_exporter import export_to_excel
 from src.logic.database_exporter import export_to_database  # ✅ Import the database exporter
 from src.utils.i18n import gettext_gettext  # ✅ Import translation

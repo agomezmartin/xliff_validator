@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-26 14:08+0100\n"
+"POT-Creation-Date: 2025-02-27 10:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,11 +67,11 @@ msgstr "Salir"
 
 #: C:\xliff_validator\src\gui\main_window.py:60
 msgid "User closed aplication."
-msgstr "_Cabal vertical descendientes._"
+msgstr "El usuario ha cerrado la aplicación."
 
 #: C:\xliff_validator\src\gui\main_window.py:64
 msgid "User started application"
-msgstr "_Manos motivadas revalorización_"
+msgstr "El usuario ha abierto la aplicación."
 
 #: C:\xliff_validator\src\gui\validator_screen.py:25
 #: C:\xliff_validator\src\gui\validator_screen.py:68
@@ -96,7 +96,7 @@ msgstr "Volver al inicio"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:64
 msgid "XLIFF Files (*.xliff *.xml)"
-msgstr "Archivos XLIFF (*.xliff *.xml)_"
+msgstr "Archivos XLIFF (*.xliff *.xml)"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:73
 msgid "No file selected."
@@ -123,37 +123,37 @@ msgid "QA Status"
 msgstr "Resultado"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:115
-#: C:\xliff_validator\src\logic\qa_checker.py:111
+#: C:\xliff_validator\src\logic\qa_checker.py:68
 msgid "Correct"
 msgstr "Correcto"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:117
-#: C:\xliff_validator\src\logic\qa_checker.py:94
+#: C:\xliff_validator\src\logic\qa_checker.py:51
 msgid "Untranslated segment"
 msgstr "Segmento sin traducir"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:119
-#: C:\xliff_validator\src\logic\qa_checker.py:100
+#: C:\xliff_validator\src\logic\qa_checker.py:57
 msgid "Source in target"
 msgstr "Original en traducción"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:121
-#: C:\xliff_validator\src\logic\qa_checker.py:97
+#: C:\xliff_validator\src\logic\qa_checker.py:54
 msgid "Source missing"
 msgstr "Original vacío"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:123
-#: C:\xliff_validator\src\logic\qa_checker.py:103
+#: C:\xliff_validator\src\logic\qa_checker.py:60
 msgid "Mismatch/missing tag"
 msgstr "Etiqueta distinta"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:125
-#: C:\xliff_validator\src\logic\qa_checker.py:106
+#: C:\xliff_validator\src\logic\qa_checker.py:63
 msgid "Mismatch/missing number"
 msgstr "Número distinto"
 
 #: C:\xliff_validator\src\gui\validator_screen.py:127
-#: C:\xliff_validator\src\logic\qa_checker.py:109
+#: C:\xliff_validator\src\logic\qa_checker.py:66
 msgid "Pseudotranslated"
 msgstr "Pseudotraducido"
 
@@ -238,42 +238,42 @@ msgstr "â IOError: Error al escribir en el archivo."
 msgid "â Unexpected Error: {e}"
 msgstr "â Error inesperado: {e}"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:37
-msgid "Segments extracted with internal tags successfully."
-msgstr "Se han extraído los segmentos con etiquetas internas correctamente."
+#: C:\xliff_validator\src\logic\parse_xliff.py:38
+msgid "Segments extracted successfully."
+msgstr "Se han extraído los segmentos correctamente."
 
-#: C:\xliff_validator\src\logic\qa_checker.py:42
-#: C:\xliff_validator\src\logic\qa_checker.py:43
+#: C:\xliff_validator\src\logic\parse_xliff.py:43
+#: C:\xliff_validator\src\logic\parse_xliff.py:44
 msgid "Error: The XLIFF file is corrupted or unreadable."
 msgstr "Error: El archivo XLIFF no se puede leer o está corrupto."
 
-#: C:\xliff_validator\src\logic\qa_checker.py:46
-#: C:\xliff_validator\src\logic\qa_checker.py:47
+#: C:\xliff_validator\src\logic\parse_xliff.py:47
+#: C:\xliff_validator\src\logic\parse_xliff.py:48
 msgid "Error: "
 msgstr "Error: "
 
-#: C:\xliff_validator\src\logic\qa_checker.py:114
-#: C:\xliff_validator\src\logic\qa_checker.py:115
+#: C:\xliff_validator\src\logic\qa_checker.py:71
+#: C:\xliff_validator\src\logic\qa_checker.py:72
 msgid "Error on QA validation rules: {e}"
 msgstr "Error en las reglas de validación: {e}"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:128
-#: C:\xliff_validator\src\logic\qa_checker.py:129
+#: C:\xliff_validator\src\logic\qa_checker.py:84
+#: C:\xliff_validator\src\logic\qa_checker.py:85
 msgid "Error checking mismatched tags: {e}"
 msgstr "Error al comprobar los posibles problemas con las etiquetas: {e}"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:142
-#: C:\xliff_validator\src\logic\qa_checker.py:143
+#: C:\xliff_validator\src\logic\qa_checker.py:98
+#: C:\xliff_validator\src\logic\qa_checker.py:99
 msgid "Error checking mismatched numbers: {e}"
 msgstr "Error al comprobar los posibles problemas con los números: {e}"
 
-#: C:\xliff_validator\src\logic\qa_checker.py:152
-#: C:\xliff_validator\src\logic\qa_checker.py:153
+#: C:\xliff_validator\src\logic\qa_checker.py:107
+#: C:\xliff_validator\src\logic\qa_checker.py:108
 msgid "Error checking pseudotranslated segments: {e}"
 msgstr "Error al comprobar los segmentos pseudotraducidos: {e}"
 
-#~ msgid "Segments extracted and validated successfully."
-#~ msgstr "Los resultados se han extraído y validado correctamente."
+#~ msgid "Segments extracted with internal tags successfully."
+#~ msgstr "Se han extraído los segmentos con etiquetas internas correctamente."
 
 #~ msgid "Error extracting segment tags: {e}"
 #~ msgstr "Error durante la extracción de las etiquetas de los segmentos: {e}"
