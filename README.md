@@ -11,6 +11,7 @@ The following information is produced:
 	2. Untranslated Segment
 	3. Mismatch/missing tag
 	4. Mismatch/missing number
+	4. Pseudotranslated
 
 Report can be exported to Excel (.xlsx) file.
 
